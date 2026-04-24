@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -30,143 +31,196 @@ body{font-family:var(--fb);background:var(--bg);color:var(--t1);min-height:100vh
 
 /* ── Loading ── */
 #ov{position:fixed;inset:0;background:rgba(0,47,92,.88);display:flex;flex-direction:column;
-  align-items:center;justify-content:center;z-index:9999;gap:16px;transition:opacity .3s}
+align-items:center;justify-content:center;z-index:9999;gap:16px;transition:opacity .3s}
 #ov.hidden{opacity:0;pointer-events:none}
 .spin{width:44px;height:44px;border:3px solid rgba(255,255,255,.2);
-  border-top-color:var(--acc);border-radius:50%;animation:sp .7s linear infinite}
+border-top-color:var(–acc);border-radius:50%;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
-.ov-txt{font-family:var(--fd);font-weight:700;font-size:12px;color:#fff;
-  letter-spacing:2px;text-transform:uppercase}
+.ov-txt{font-family:var(–fd);font-weight:700;font-size:12px;color:#fff;
+letter-spacing:2px;text-transform:uppercase}
 
 /* ── Header ── */
-#hdr{position:sticky;top:0;z-index:200;background:var(--p);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 16px;height:52px;box-shadow:0 2px 10px rgba(0,47,92,.3)}
+#hdr{position:sticky;top:0;z-index:200;background:var(–p);
+display:flex;align-items:center;justify-content:space-between;
+padding:0 16px;height:52px;box-shadow:0 2px 10px rgba(0,47,92,.3)}
 .hdr-l{display:flex;align-items:center;gap:10px}
-.hdr-title{font-family:var(--fd);font-weight:700;font-size:15px;color:#fff;white-space:nowrap}
+.hdr-title{font-family:var(–fd);font-weight:700;font-size:15px;color:#fff;white-space:nowrap}
 .sim-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
-  color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:9999px;white-space:nowrap}
-.sim-badge .dot{color:var(--acc)}
+color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:9999px;white-space:nowrap}
+.sim-badge .dot{color:var(–acc)}
 
 /* ── App body ── */
 #app-body{display:flex;max-width:1400px;margin:0 auto;min-height:calc(100vh - 52px)}
 
 /* ── Sidebar desktop ── */
-#sidebar{width:340px;flex-shrink:0;background:var(--surf);border-right:1px solid var(--brd);
-  overflow-y:auto;padding:16px 14px 80px}
+#sidebar{width:340px;flex-shrink:0;background:var(–surf);border-right:1px solid var(–brd);
+overflow-y:auto;padding:16px 14px 80px}
 
 /* ── Main ── */
-#main{flex:1;overflow-y:auto;padding:16px 20px 40px;background:var(--bg)}
+#main{flex:1;overflow-y:auto;padding:16px 20px 40px;background:var(–bg)}
 
 /* ── Section title ── */
-.stit{font-family:var(--fd);font-weight:700;font-size:12px;text-transform:uppercase;
-  letter-spacing:1.2px;color:var(--p);margin:18px 0 10px;padding-bottom:5px;
-  border-bottom:2px solid var(--p);display:flex;align-items:center;gap:6px}
+.stit{font-family:var(–fd);font-weight:700;font-size:12px;text-transform:uppercase;
+letter-spacing:1.2px;color:var(–p);margin:18px 0 10px;padding-bottom:5px;
+border-bottom:2px solid var(–p);display:flex;align-items:center;gap:6px}
 .stit:first-child{margin-top:0}
 
-/* ── Param card (desktop sidebar grouping) ── */
-.param-card{background:var(--bg);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:14px;margin-bottom:12px;box-shadow:var(--sh)}
+/* ── Param card ── */
+.param-card{background:var(–bg);border:1px solid var(–brd);border-radius:var(–r2);
+padding:14px;margin-bottom:12px;box-shadow:var(–sh)}
 .param-card-title{font-size:11px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.8px;color:var(--t2);margin-bottom:10px;
-  display:flex;align-items:center;gap:5px}
+letter-spacing:.8px;color:var(–t2);margin-bottom:10px;
+display:flex;align-items:center;gap:5px}
 
 /* ── Input ── */
 .ig{margin-bottom:12px}
-.il{display:block;font-size:11px;font-weight:600;color:var(--t2);margin-bottom:5px;letter-spacing:.3px}
-.if{width:100%;height:44px;background:var(--surf);border:1.5px solid var(--brd);
-  border-radius:var(--r1);padding:0 12px;font-family:var(--fb);font-size:16px;
-  color:var(--t1);transition:border-color .2s;-webkit-appearance:none;appearance:none}
-.if:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px rgba(0,74,133,.1)}
+.il{display:block;font-size:11px;font-weight:600;color:var(–t2);margin-bottom:5px;letter-spacing:.3px}
+.il-hint{display:block;font-size:10px;color:var(–td);font-weight:400;margin-top:2px;line-height:1.3}
+.if{width:100%;height:44px;background:var(–surf);border:1.5px solid var(–brd);
+border-radius:var(–r1);padding:0 12px;font-family:var(–fb);font-size:16px;
+color:var(–t1);transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.if:focus{outline:none;border-color:var(–p);box-shadow:0 0 0 3px rgba(0,74,133,.1)}
 
 /* ── Slider ── */
 .sr{margin-bottom:12px}
-.sl{font-size:11px;font-weight:600;color:var(--t2);margin-bottom:5px;display:block;letter-spacing:.3px}
+.sl{font-size:11px;font-weight:600;color:var(–t2);margin-bottom:5px;display:block;letter-spacing:.3px}
 .sc{display:flex;align-items:center;gap:8px}
-input[type=range]{-webkit-appearance:none;flex:1;height:5px;background:var(--brd);
-  border-radius:9999px;outline:none;cursor:pointer;min-height:5px}
+input[type=range]{-webkit-appearance:none;flex:1;height:5px;background:var(–brd);
+border-radius:9999px;outline:none;cursor:pointer;min-height:5px}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;
-  background:var(--p);border-radius:50%;box-shadow:0 1px 6px rgba(0,74,133,.35);
-  transition:transform .15s;border:2px solid #fff}
+background:var(–p);border-radius:50%;box-shadow:0 1px 6px rgba(0,74,133,.35);
+transition:transform .15s;border:2px solid #fff}
 input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
-.sv{background:var(--p);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;
-  border-radius:9999px;min-width:46px;text-align:center;white-space:nowrap;flex-shrink:0}
+.sv{background:var(–p);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;
+border-radius:9999px;min-width:46px;text-align:center;white-space:nowrap;flex-shrink:0}
+
+/* ── Select policy ── */
+.policy-select{width:100%;height:44px;background:var(–surf);border:1.5px solid var(–brd);
+border-radius:var(–r1);padding:0 12px;font-family:var(–fb);font-size:14px;font-weight:600;
+color:var(–t1);cursor:pointer;-webkit-appearance:none;appearance:none;
+background-image:url(“data:image/svg+xml;charset=UTF-8,%3csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 24 24’ fill=’%235A7A94’%3e%3cpath d=‘M7 10l5 5 5-5z’/%3e%3c/svg%3e”);
+background-repeat:no-repeat;background-position:right 10px center;background-size:20px;padding-right:36px}
+.policy-select:focus{outline:none;border-color:var(–p)}
 
 /* ── Buttons ── */
 .btn-p{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
-  height:50px;background:var(--p);color:#fff;font-family:var(--fd);font-weight:700;
-  font-size:15px;letter-spacing:.5px;border:none;border-radius:var(--r2);cursor:pointer;
-  transition:background .2s,transform .1s,box-shadow .2s;
-  box-shadow:0 4px 14px rgba(0,74,133,.3);-webkit-tap-highlight-color:transparent;margin-top:16px}
-.btn-p:hover{background:var(--pd)}
+height:50px;background:var(–p);color:#fff;font-family:var(–fd);font-weight:700;
+font-size:15px;letter-spacing:.5px;border:none;border-radius:var(–r2);cursor:pointer;
+transition:background .2s,transform .1s,box-shadow .2s;
+box-shadow:0 4px 14px rgba(0,74,133,.3);-webkit-tap-highlight-color:transparent;margin-top:16px}
+.btn-p:hover{background:var(–pd)}
 .btn-p:active{transform:scale(.98)}
 .btn-s{display:inline-flex;align-items:center;gap:5px;height:38px;padding:0 14px;
-  background:var(--sec);color:var(--p);font-family:var(--fb);font-size:12px;font-weight:600;
-  border:none;border-radius:var(--r1);cursor:pointer;transition:background .2s;
-  -webkit-tap-highlight-color:transparent}
+background:var(–sec);color:var(–p);font-family:var(–fb);font-size:12px;font-weight:600;
+border:none;border-radius:var(–r1);cursor:pointer;transition:background .2s;
+-webkit-tap-highlight-color:transparent}
 .btn-s:hover{background:#b0cfe9}
 .btns-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 
 /* ── Stagionalità grid ── */
 .stag-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
 .mg{display:flex;flex-direction:column;gap:3px;align-items:center}
-.ml{font-size:10px;font-weight:700;color:var(--t2);text-align:center;letter-spacing:.3px}
-.mi{width:100%;height:42px;background:var(--surf);border:1.5px solid var(--brd);
-  border-radius:var(--r1);text-align:center;font-size:16px;font-weight:600;
-  color:var(--t1);-webkit-appearance:none;appearance:none;transition:border-color .2s,background .2s}
-.mi:focus{outline:none;border-color:var(--p);background:var(--bg)}
-.mi.pos{border-color:rgba(26,158,111,.5);background:rgba(26,158,111,.06);color:var(--ok)}
-.mi.neg{border-color:rgba(208,2,27,.4);background:rgba(208,2,27,.05);color:var(--err)}
+.ml{font-size:10px;font-weight:700;color:var(–t2);text-align:center;letter-spacing:.3px}
+.mi{width:100%;height:42px;background:var(–surf);border:1.5px solid var(–brd);
+border-radius:var(–r1);text-align:center;font-size:16px;font-weight:600;
+color:var(–t1);-webkit-appearance:none;appearance:none;transition:border-color .2s,background .2s}
+.mi:focus{outline:none;border-color:var(–p);background:var(–bg)}
+.mi.pos{border-color:rgba(26,158,111,.5);background:rgba(26,158,111,.06);color:var(–ok)}
+.mi.neg{border-color:rgba(208,2,27,.4);background:rgba(208,2,27,.05);color:var(–err)}
 
 /* ── Preview stagionalità ── */
-#stag-preview-wrap{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:12px;margin-bottom:12px}
-#stag-preview-title{font-size:11px;font-weight:700;color:var(--t2);text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:8px}
+#stag-preview-wrap{background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
+padding:12px;margin-bottom:12px}
+#stag-preview-title{font-size:11px;font-weight:700;color:var(–t2);text-transform:uppercase;
+letter-spacing:.8px;margin-bottom:8px}
 #stag-preview-canvas-wrap{height:90px;position:relative}
 
 /* ── Demand summary chips ── */
 .demand-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.chip{background:var(--surf);border:1px solid var(--brd);border-radius:9999px;
-  padding:5px 12px;font-size:12px;font-weight:600;color:var(--t2);display:flex;gap:5px;align-items:center}
-.chip strong{color:var(--t1);font-size:13px}
+.chip{background:var(–surf);border:1px solid var(–brd);border-radius:9999px;
+padding:5px 12px;font-size:12px;font-weight:600;color:var(–t2);display:flex;gap:5px;align-items:center}
+.chip strong{color:var(–t1);font-size:13px}
 
 /* ── KPI grid ── */
 .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
-.kpi{background:var(--bg);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:14px 14px 12px;box-shadow:var(--sh);border-top:3px solid var(--p);
-  transition:transform .2s}
+.kpi{background:var(–bg);border:1px solid var(–brd);border-radius:var(–r2);
+padding:14px 14px 12px;box-shadow:var(–sh);border-top:3px solid var(–p);
+transition:transform .2s}
 .kpi:hover{transform:translateY(-1px)}
-.kpi-l{font-size:10px;font-weight:700;color:var(--t2);text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:5px}
-.kpi-v{font-family:var(--fd);font-weight:800;font-size:24px;color:var(--t1);
-  line-height:1;animation:fsu .4s ease}
+.kpi-l{font-size:10px;font-weight:700;color:var(–t2);text-transform:uppercase;
+letter-spacing:.8px;margin-bottom:5px}
+.kpi-v{font-family:var(–fd);font-weight:800;font-size:24px;color:var(–t1);
+line-height:1;animation:fsu .4s ease}
 @keyframes fsu{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.kpi-s{font-size:10px;color:var(--t2);margin-top:3px}
+.kpi-s{font-size:10px;color:var(–t2);margin-top:3px}
 
 /* ── Scenario bands ── */
 .scen-bands{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
-.scen{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:12px 8px;text-align:center}
+.scen{background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
+padding:12px 8px;text-align:center}
 .scen-t{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
-.scen-v{font-family:var(--fd);font-weight:800;font-size:16px}
-.scen-s{font-size:10px;color:var(--t2);margin-top:2px}
-.p10 .scen-t,.p10 .scen-v{color:var(--err)}
-.p50 .scen-t,.p50 .scen-v{color:var(--p)}
-.p90 .scen-t,.p90 .scen-v{color:var(--ok)}
+.scen-v{font-family:var(–fd);font-weight:800;font-size:16px}
+.scen-s{font-size:10px;color:var(–t2);margin-top:2px}
+.p10 .scen-t,.p10 .scen-v{color:var(–err)}
+.p50 .scen-t,.p50 .scen-v{color:var(–p)}
+.p90 .scen-t,.p90 .scen-v{color:var(–ok)}
+
+/* ── Recommendation card (NEW) ── */
+.reco-card{background:linear-gradient(135deg,#004A85 0%,#0072C6 100%);
+border-radius:var(–r2);padding:18px;margin-bottom:16px;color:#fff;
+box-shadow:0 6px 20px rgba(0,74,133,.3)}
+.reco-header{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.reco-icon{width:36px;height:36px;background:rgba(255,255,255,.18);border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.reco-title{font-family:var(–fd);font-weight:800;font-size:15px;line-height:1.2;letter-spacing:.3px}
+.reco-sub{font-size:11px;opacity:.85;margin-top:1px;font-weight:400}
+.reco-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.reco-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+border-radius:var(–r1);padding:10px 12px}
+.reco-item-l{font-size:10px;text-transform:uppercase;letter-spacing:.6px;opacity:.85;font-weight:600;margin-bottom:3px}
+.reco-item-v{font-family:var(–fd);font-weight:800;font-size:18px;line-height:1.1}
+.reco-item-s{font-size:10px;opacity:.8;margin-top:2px}
+.reco-action{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
+border-radius:var(–r1);padding:10px 12px;font-size:12px;line-height:1.4;margin-top:4px}
+.reco-action strong{font-weight:700}
+
+/* ── Order plan table (NEW) ── */
+.plan-wrap{background:var(–bg);border:1px solid var(–brd);border-radius:var(–r2);
+overflow:hidden;margin-bottom:16px;box-shadow:var(–sh)}
+.plan-header{padding:12px 14px;background:var(–surf);border-bottom:1px solid var(–brd);
+display:flex;align-items:center;justify-content:space-between}
+.plan-header-t{font-family:var(–fd);font-weight:700;font-size:12px;color:var(–p);
+text-transform:uppercase;letter-spacing:.8px}
+.plan-list{max-height:320px;overflow-y:auto}
+.plan-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+padding:12px 14px;border-bottom:1px solid var(–brd);transition:background .15s}
+.plan-row:last-child{border-bottom:none}
+.plan-row:hover{background:var(–surf)}
+.plan-badge{width:52px;text-align:center;font-family:var(–fd);font-weight:800;font-size:11px;
+color:#fff;background:var(–p);padding:6px 0;border-radius:var(–r1);line-height:1.1;letter-spacing:.3px}
+.plan-badge.urgent{background:var(–err)}
+.plan-badge small{display:block;font-size:9px;font-weight:600;opacity:.9;margin-top:1px}
+.plan-body{flex:1;min-width:0}
+.plan-body-t{font-size:13px;font-weight:700;color:var(–t1);line-height:1.2}
+.plan-body-s{font-size:11px;color:var(–t2);margin-top:3px;line-height:1.3}
+.plan-qty{text-align:right;flex-shrink:0}
+.plan-qty-v{font-family:var(–fd);font-weight:800;font-size:15px;color:var(–p);line-height:1}
+.plan-qty-l{font-size:10px;color:var(–t2);margin-top:2px}
+.plan-empty{padding:30px 14px;text-align:center;color:var(–t2);font-size:13px}
+.plan-empty small{display:block;margin-top:6px;font-size:11px;color:var(–td)}
 
 /* ── Chart tabs ── */
-.chart-tabs{display:flex;gap:0;background:var(--surf);border:1px solid var(--brd);
-  border-radius:var(--r1);padding:3px;margin-bottom:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.ctab{flex:1;height:36px;min-width:80px;background:transparent;color:var(--t2);
-  font-family:var(--fb);font-size:12px;font-weight:600;border:none;border-radius:4px;
-  cursor:pointer;transition:all .2s;white-space:nowrap;padding:0 10px;
-  -webkit-tap-highlight-color:transparent}
-.ctab.active{background:var(--p);color:#fff;box-shadow:0 2px 6px rgba(0,74,133,.25)}
+.chart-tabs{display:flex;gap:0;background:var(–surf);border:1px solid var(–brd);
+border-radius:var(–r1);padding:3px;margin-bottom:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ctab{flex:1;height:36px;min-width:80px;background:transparent;color:var(–t2);
+font-family:var(–fb);font-size:12px;font-weight:600;border:none;border-radius:4px;
+cursor:pointer;transition:all .2s;white-space:nowrap;padding:0 10px;
+-webkit-tap-highlight-color:transparent}
+.ctab.active{background:var(–p);color:#fff;box-shadow:0 2px 6px rgba(0,74,133,.25)}
 
 /* ── Chart container ── */
-.chart-box{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:14px;margin-bottom:16px}
+.chart-box{background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
+padding:14px;margin-bottom:16px}
 .ch-wrap{height:240px;position:relative}
 .cpanel{display:none}
 .cpanel.active{display:block}
@@ -174,61 +228,63 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
 /* ── Table ── */
 .tbl-section{margin-bottom:16px}
 .tbl-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;
-  padding:12px 14px;background:var(--surf);border:1px solid var(--brd);border-radius:var(--r2);
-  -webkit-tap-highlight-color:transparent;transition:background .2s}
-.tbl-toggle:hover{background:var(--sec)}
-.tbl-toggle-t{font-family:var(--fd);font-weight:700;font-size:12px;color:var(--p);
-  text-transform:uppercase;letter-spacing:.8px}
-.tbl-wrap{overflow-x:auto;border:1px solid var(--brd);border-top:none;
-  border-radius:0 0 var(--r2) var(--r2);display:none}
+padding:12px 14px;background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
+-webkit-tap-highlight-color:transparent;transition:background .2s}
+.tbl-toggle:hover{background:var(–sec)}
+.tbl-toggle-t{font-family:var(–fd);font-weight:700;font-size:12px;color:var(–p);
+text-transform:uppercase;letter-spacing:.8px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(–brd);border-top:none;
+border-radius:0 0 var(–r2) var(–r2);display:none}
 .tbl-wrap.open{display:block}
-table{width:100%;border-collapse:collapse;font-size:11px;min-width:640px}
-thead th{background:var(--p);color:#fff;font-weight:600;padding:9px 10px;
-  text-align:right;white-space:nowrap;font-size:10px;letter-spacing:.3px}
+table{width:100%;border-collapse:collapse;font-size:11px;min-width:680px}
+thead th{background:var(–p);color:#fff;font-weight:600;padding:9px 10px;
+text-align:right;white-space:nowrap;font-size:10px;letter-spacing:.3px}
 thead th:first-child{text-align:left}
-tbody tr:nth-child(even){background:var(--surf)}
-tbody td{padding:8px 10px;border-bottom:1px solid var(--brd);text-align:right;color:var(--t1)}
+tbody tr:nth-child(even){background:var(–surf)}
+tbody tr.is-order-month{background:rgba(0,174,239,.06)}
+tbody tr.is-order-month:nth-child(even){background:rgba(0,174,239,.1)}
+tbody td{padding:8px 10px;border-bottom:1px solid var(–brd);text-align:right;color:var(–t1)}
 tbody td:first-child{text-align:left;font-weight:600}
 .bst{display:inline-block;padding:2px 7px;border-radius:9999px;
-  font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
-.b-ok{background:rgba(26,158,111,.12);color:var(--ok)}
-.b-low{background:rgba(245,166,35,.12);color:var(--warn)}
-.b-crit{background:rgba(208,2,27,.12);color:var(--err)}
-.b-so{background:rgba(208,2,27,.2);color:var(--err);font-weight:800}
+font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.b-ok{background:rgba(26,158,111,.12);color:var(–ok)}
+.b-low{background:rgba(245,166,35,.12);color:var(–warn)}
+.b-crit{background:rgba(208,2,27,.12);color:var(–err)}
+.b-so{background:rgba(208,2,27,.2);color:var(–err);font-weight:800}
 
 /* ── Resoconto ── */
-.resc{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r2);
-  padding:16px;margin-bottom:16px}
-.resc-t{font-family:var(--fd);font-weight:700;font-size:14px;color:var(--p);
-  margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.resc{background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
+padding:16px;margin-bottom:16px}
+.resc-t{font-family:var(–fd);font-weight:700;font-size:14px;color:var(–p);
+margin-bottom:14px;display:flex;align-items:center;gap:7px}
 .resc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
-.ri{background:var(--bg);border:1px solid var(--brd);border-radius:var(--r1);padding:9px 11px}
-.ri-l{font-size:10px;color:var(--t2);font-weight:500}
-.ri-v{font-size:14px;font-weight:700;color:var(--t1);margin-top:2px}
-.al{border-radius:var(--r1);padding:9px 12px;margin-bottom:7px;font-size:12px;
-  font-weight:500;display:flex;align-items:flex-start;gap:7px;line-height:1.4}
-.al-w{background:rgba(245,166,35,.1);border-left:3px solid var(--warn);color:#7a4d00}
-.al-e{background:rgba(208,2,27,.08);border-left:3px solid var(--err);color:#800012}
-.al-s{background:rgba(26,158,111,.1);border-left:3px solid var(--ok);color:#0a5535}
-.gf{display:flex;align-items:center;gap:9px;padding:12px 14px;border-radius:var(--r2);
-  font-family:var(--fd);font-weight:700;font-size:15px;margin-top:12px}
-.gf-ok{background:rgba(26,158,111,.1);color:var(--ok);border:1.5px solid var(--ok)}
-.gf-ot{background:rgba(245,166,35,.1);color:#7a4d00;border:1.5px solid var(--warn)}
-.gf-cr{background:rgba(208,2,27,.09);color:var(--err);border:1.5px solid var(--err)}
+.ri{background:var(–bg);border:1px solid var(–brd);border-radius:var(–r1);padding:9px 11px}
+.ri-l{font-size:10px;color:var(–t2);font-weight:500}
+.ri-v{font-size:14px;font-weight:700;color:var(–t1);margin-top:2px}
+.al{border-radius:var(–r1);padding:9px 12px;margin-bottom:7px;font-size:12px;
+font-weight:500;display:flex;align-items:flex-start;gap:7px;line-height:1.4}
+.al-w{background:rgba(245,166,35,.1);border-left:3px solid var(–warn);color:#7a4d00}
+.al-e{background:rgba(208,2,27,.08);border-left:3px solid var(–err);color:#800012}
+.al-s{background:rgba(26,158,111,.1);border-left:3px solid var(–ok);color:#0a5535}
+.gf{display:flex;align-items:center;gap:9px;padding:12px 14px;border-radius:var(–r2);
+font-family:var(–fd);font-weight:700;font-size:15px;margin-top:12px}
+.gf-ok{background:rgba(26,158,111,.1);color:var(–ok);border:1.5px solid var(–ok)}
+.gf-ot{background:rgba(245,166,35,.1);color:#7a4d00;border:1.5px solid var(–warn)}
+.gf-cr{background:rgba(208,2,27,.09);color:var(–err);border:1.5px solid var(–err)}
 
 /* ── Bottom Nav ── */
 #bnav{display:none;position:fixed;bottom:0;left:0;right:0;
-  background:var(--bg);border-top:1px solid var(--brd);z-index:300;
-  padding-bottom:var(--safe-b)}
-.nav-items{display:flex;height:var(--nav-h)}
+background:var(–bg);border-top:1px solid var(–brd);z-index:300;
+padding-bottom:var(–safe-b)}
+.nav-items{display:flex;height:var(–nav-h)}
 .ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
-  cursor:pointer;border:none;background:transparent;-webkit-tap-highlight-color:transparent;
-  padding-bottom:2px;position:relative}
-.ni.active::after{content:'';position:absolute;top:0;left:25%;right:25%;
-  height:2px;background:var(--p);border-radius:0 0 2px 2px}
-.ni-ic{font-size:22px;color:var(--td);transition:color .15s}
-.ni-lb{font-size:10px;font-weight:600;color:var(--td);letter-spacing:.3px;transition:color .15s}
-.ni.active .ni-ic,.ni.active .ni-lb{color:var(--p)}
+cursor:pointer;border:none;background:transparent;-webkit-tap-highlight-color:transparent;
+padding-bottom:2px;position:relative}
+.ni.active::after{content:’’;position:absolute;top:0;left:25%;right:25%;
+height:2px;background:var(–p);border-radius:0 0 2px 2px}
+.ni-ic{font-size:22px;color:var(–td);transition:color .15s}
+.ni-lb{font-size:10px;font-weight:600;color:var(–td);letter-spacing:.3px;transition:color .15s}
+.ni.active .ni-ic,.ni.active .ni-lb{color:var(–p)}
 
 /* ── Mobile sections ── */
 .msec{display:block}
@@ -236,44 +292,48 @@ tbody td:first-child{text-align:left;font-weight:600}
 
 /* ── Responsive ── */
 @media(max-width:767px){
-  #sidebar{display:none}
-  #main{padding:0 0 calc(var(--nav-h) + var(--safe-b) + 4px) 0}
-  #bnav{display:block}
-  .kpi-grid{grid-template-columns:repeat(2,1fr);gap:8px}
-  .scen-bands{grid-template-columns:repeat(3,1fr);gap:6px}
-  .scen{padding:10px 6px}
-  .scen-v{font-size:14px}
-  .ch-wrap{height:220px}
-  .resc-grid{grid-template-columns:repeat(2,1fr)}
-  .stag-grid{grid-template-columns:repeat(3,1fr)}
-  .msec{display:none}
-  .msec.show{display:block}
+#sidebar{display:none}
+#main{padding:0 0 calc(var(–nav-h) + var(–safe-b) + 4px) 0}
+#bnav{display:block}
+.kpi-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+.scen-bands{grid-template-columns:repeat(3,1fr);gap:6px}
+.scen{padding:10px 6px}
+.scen-v{font-size:14px}
+.ch-wrap{height:220px}
+.resc-grid{grid-template-columns:repeat(2,1fr)}
+.stag-grid{grid-template-columns:repeat(3,1fr)}
+.msec{display:none}
+.msec.show{display:block}
+.reco-grid{grid-template-columns:1fr}
 }
 @media(min-width:768px){
-  #hdr{height:60px}
-  .hdr-title{font-size:17px}
-  .kpi-grid{grid-template-columns:repeat(4,1fr)}
-  .ch-wrap{height:300px}
-  #bnav{display:none!important}
-  .msec{display:block!important}
-  #mobile-params,.pane-demand-mob{display:none!important}
-  #risultati-section,.pane-adv-mob{display:block!important}
+#hdr{height:60px}
+.hdr-title{font-size:17px}
+.kpi-grid{grid-template-columns:repeat(4,1fr)}
+.ch-wrap{height:300px}
+#bnav{display:none!important}
+.msec{display:block!important}
+#mobile-params,.pane-demand-mob{display:none!important}
+#risultati-section,.pane-adv-mob{display:block!important}
 }
 
 /* ── Utility ── */
-.c-ok{color:var(--ok)}.c-w{color:var(--warn)}.c-err{color:var(--err)}
-.c-p{color:var(--p)}.c-pu{color:var(--purp)}
+.c-ok{color:var(–ok)}.c-w{color:var(–warn)}.c-err{color:var(–err)}
+.c-p{color:var(–p)}.c-pu{color:var(–purp)}
 </style>
+
 </head>
 <body>
 
 <!-- Loading -->
+
 <div id="ov">
   <div class="spin"></div>
   <div class="ov-txt">Simulazione in corso…</div>
 </div>
 
 <!-- Header -->
+
 <header id="hdr">
   <div class="hdr-l">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 32" width="80" height="25" style="flex-shrink:0">
@@ -288,9 +348,11 @@ tbody td:first-child{text-align:left;font-weight:600}
 <div id="app-body">
 
 <!-- ══ SIDEBAR DESKTOP ══ -->
+
 <aside id="sidebar">
 
   <!-- Gruppo: Domanda -->
+
   <div class="param-card">
     <div class="param-card-title">📦 Domanda</div>
     <div class="ig">
@@ -298,7 +360,7 @@ tbody td:first-child{text-align:left;font-weight:600}
       <input type="number" id="p-demand" class="if" value="15000" min="100" step="500">
     </div>
     <div class="sr">
-      <span class="sl">Variabilità (σ %)</span>
+      <span class="sl">Variabilità (CV %)</span>
       <div class="sc"><input type="range" id="p-variability" min="0" max="50" value="15" step="1">
         <span class="sv" id="v-variability">15%</span></div>
     </div>
@@ -308,7 +370,6 @@ tbody td:first-child{text-align:left;font-weight:600}
       <button class="btn-s" onclick="applyExample()">📈 Esempio</button>
       <button class="btn-s" onclick="resetStag()">↺ Reset</button>
     </div>
-    <!-- Preview mini -->
     <div id="stag-preview-wrap" style="margin-top:10px">
       <div id="stag-preview-title">Profilo domanda annuale</div>
       <div id="stag-preview-canvas-wrap"><canvas id="stag-preview-chart"></canvas></div>
@@ -316,16 +377,23 @@ tbody td:first-child{text-align:left;font-weight:600}
   </div>
 
   <!-- Gruppo: Stock & Tempi -->
+
   <div class="param-card">
     <div class="param-card-title">🏭 Stock & Tempi</div>
     <div class="ig">
       <label class="il">Stock attuale (pz)</label>
       <input type="number" id="p-stock" class="if" value="40000" min="0" step="1000">
     </div>
+    <div class="ig">
+      <label class="il">Shelf life residua stock attuale (mesi)
+        <span class="il-hint">Mesi prima della scadenza dei lotti in magazzino oggi</span>
+      </label>
+      <input type="number" id="p-stockAge" class="if" value="18" min="1" step="1">
+    </div>
     <div class="sr">
-      <span class="sl">Safety stock (giorni)</span>
-      <div class="sc"><input type="range" id="p-safety" min="5" max="60" value="20" step="1">
-        <span class="sv" id="v-safety">20 gg</span></div>
+      <span class="sl">Service level target (%)</span>
+      <div class="sc"><input type="range" id="p-service" min="85" max="99" value="95" step="1">
+        <span class="sv" id="v-service">95%</span></div>
     </div>
     <div class="sr">
       <span class="sl">Lead time (mesi)</span>
@@ -335,19 +403,34 @@ tbody td:first-child{text-align:left;font-weight:600}
   </div>
 
   <!-- Gruppo: Prodotto & Ordini -->
+
   <div class="param-card">
     <div class="param-card-title">💊 Prodotto & Ordini</div>
     <div class="ig">
-      <label class="il">Shelf life (mesi)</label>
+      <label class="il">Shelf life totale (mesi)</label>
       <input type="number" id="p-shelflife" class="if" value="24" min="1" step="1">
+    </div>
+    <div class="ig">
+      <label class="il">Shelf life residua al ricevimento (%)
+        <span class="il-hint">Tipico accordo con fornitore: 75–85%</span>
+      </label>
+      <input type="number" id="p-slIncoming" class="if" value="80" min="30" max="100" step="5">
     </div>
     <div class="ig">
       <label class="il">MOQ — Minimum Order Qty (pz)</label>
       <input type="number" id="p-moq" class="if" value="20000" min="100" step="1000">
     </div>
+    <div class="ig">
+      <label class="il">Politica di riordino</label>
+      <select id="p-policy" class="policy-select">
+        <option value="sS">(s, S) — Riordino al ROP</option>
+        <option value="RQ">Review periodica (ogni mese)</option>
+      </select>
+    </div>
   </div>
 
   <!-- Gruppo: Simulazione -->
+
   <div class="param-card">
     <div class="param-card-title">⚙ Simulazione</div>
     <div class="sr">
@@ -362,13 +445,16 @@ tbody td:first-child{text-align:left;font-weight:600}
     </div>
   </div>
 
-  <button class="btn-p" onclick="run()">▶ Esegui Simulazione</button>
+<button class="btn-p" onclick="run()">▶ Esegui Simulazione</button>
+
 </aside>
 
 <!-- ══ MAIN CONTENT ══ -->
+
 <main id="main">
 
-  <!-- ── MOBILE: Parametri (tab 0) ── -->
+  <!-- ── MOBILE: Parametri ── -->
+
   <div id="mobile-params" class="msec pane" style="display:none">
     <div class="param-card">
       <div class="param-card-title">🏭 Stock attuale</div>
@@ -376,10 +462,14 @@ tbody td:first-child{text-align:left;font-weight:600}
         <label class="il">Stock attuale (pz)</label>
         <input type="number" id="m-stock" class="if" value="40000" min="0" step="1000" oninput="sp('stock',this.value)">
       </div>
+      <div class="ig">
+        <label class="il">Shelf life residua stock (mesi)</label>
+        <input type="number" id="m-stockAge" class="if" value="18" min="1" step="1" oninput="sp('stockAge',this.value)">
+      </div>
       <div class="sr">
-        <span class="sl">Safety stock (giorni)</span>
-        <div class="sc"><input type="range" id="m-safety" min="5" max="60" value="20" step="1" oninput="ss('safety',this.value,' gg')">
-          <span class="sv" id="mv-safety">20 gg</span></div>
+        <span class="sl">Service level target (%)</span>
+        <div class="sc"><input type="range" id="m-service" min="85" max="99" value="95" step="1" oninput="ss('service',this.value,'%')">
+          <span class="sv" id="mv-service">95%</span></div>
       </div>
       <div class="sr">
         <span class="sl">Lead time (mesi)</span>
@@ -390,12 +480,23 @@ tbody td:first-child{text-align:left;font-weight:600}
     <div class="param-card">
       <div class="param-card-title">💊 Prodotto & Ordini</div>
       <div class="ig">
-        <label class="il">Shelf life (mesi)</label>
+        <label class="il">Shelf life totale (mesi)</label>
         <input type="number" id="m-shelflife" class="if" value="24" min="1" step="1" oninput="sp('shelflife',this.value)">
       </div>
       <div class="ig">
-        <label class="il">MOQ — Minimum Order Qty (pz)</label>
+        <label class="il">Shelf life residua al ricevimento (%)</label>
+        <input type="number" id="m-slIncoming" class="if" value="80" min="30" max="100" step="5" oninput="sp('slIncoming',this.value)">
+      </div>
+      <div class="ig">
+        <label class="il">MOQ (pz)</label>
         <input type="number" id="m-moq" class="if" value="20000" min="100" step="1000" oninput="sp('moq',this.value)">
+      </div>
+      <div class="ig">
+        <label class="il">Politica di riordino</label>
+        <select id="m-policy" class="policy-select" onchange="sp('policy',this.value)">
+          <option value="sS">(s, S) — Riordino al ROP</option>
+          <option value="RQ">Review periodica mensile</option>
+        </select>
       </div>
     </div>
     <div class="param-card">
@@ -414,16 +515,15 @@ tbody td:first-child{text-align:left;font-weight:600}
     <button class="btn-p" onclick="run(true)">▶ Esegui Simulazione</button>
   </div>
 
-  <!-- ── MOBILE: Domanda (tab 1) ── -->
+  <!-- ── MOBILE: Domanda ── -->
+
   <div id="pane-demand-mob" class="msec pane show" style="display:none">
-    <!-- Summary chips -->
     <div class="demand-chips" id="demand-chips">
       <div class="chip">Media <strong id="chip-media">15.000</strong> pz/m</div>
-      <div class="chip">Variabilità <strong id="chip-var">15%</strong></div>
-      <div class="chip">Picco annuale <strong id="chip-peak" class="c-ok">+0%</strong></div>
-      <div class="chip">Minimo annuale <strong id="chip-min" class="c-err">+0%</strong></div>
+      <div class="chip">CV <strong id="chip-var">15%</strong></div>
+      <div class="chip">Picco <strong id="chip-peak" class="c-ok">+0%</strong></div>
+      <div class="chip">Minimo <strong id="chip-min" class="c-err">+0%</strong></div>
     </div>
-
     <div class="param-card">
       <div class="param-card-title">📦 Domanda base</div>
       <div class="ig">
@@ -432,20 +532,19 @@ tbody td:first-child{text-align:left;font-weight:600}
           oninput="sp('demand',this.value);updateDemandChips()">
       </div>
       <div class="sr">
-        <span class="sl">Variabilità stocastica (σ %)</span>
+        <span class="sl">Variabilità (CV — coeff. di variazione %)</span>
         <div class="sc"><input type="range" id="md-variability" min="0" max="50" value="15" step="1"
           oninput="ss('variability',this.value,'%');updateDemandChips()">
           <span class="sv" id="mdv-variability">15%</span></div>
       </div>
       <p style="font-size:11px;color:var(--t2);line-height:1.5;margin-top:4px">
-        La variabilità simula la fluttuazione casuale attorno alla media (distribuzione normale). Valori alti = domanda imprevedibile.
+        CV = deviazione standard / media. Misura l'imprevedibilità: 10% = stabile, 30%+ = molto volatile.
       </p>
     </div>
-
     <div class="param-card">
       <div class="param-card-title">🌿 Stagionalità mensile (%)</div>
       <p style="font-size:11px;color:var(--t2);line-height:1.5;margin-bottom:10px">
-        Inserisci la variazione rispetto alla media per ogni mese. Positivo = domanda più alta, negativo = più bassa.
+        Variazione % rispetto alla media. +20% = mese con domanda superiore del 20%.
       </p>
       <div class="stag-grid" id="stag-grid-mobile" style="grid-template-columns:repeat(3,1fr)"></div>
       <div class="btns-row">
@@ -453,109 +552,142 @@ tbody td:first-child{text-align:left;font-weight:600}
         <button class="btn-s" onclick="resetStag()">↺ Reset</button>
       </div>
     </div>
-
-    <!-- Preview grafico stagionalità -->
     <div class="param-card">
-      <div class="param-card-title">📊 Profilo domanda annuale (preview)</div>
+      <div class="param-card-title">📊 Profilo annuale (preview)</div>
       <div style="height:130px;position:relative"><canvas id="stag-preview-mob"></canvas></div>
-      <p style="font-size:10px;color:var(--t2);margin-top:8px;text-align:center">
-        Domanda mensile stimata con stagionalità applicata
-      </p>
     </div>
-
     <button class="btn-p" onclick="run(true)">▶ Esegui con questi parametri</button>
   </div>
 
-  <!-- ── Risultati (tab 2, sempre visibile desktop) ── -->
+  <!-- ── Risultati ── -->
+
   <div id="risultati-section" class="msec pane show">
 
-    <div class="stit" style="margin-top:0">📊 KPI Principali (P50)</div>
-    <div class="kpi-grid">
-      <div class="kpi" id="kpi-fr" style="border-top-color:var(--ok)">
-        <div class="kpi-l">Fill Rate</div>
-        <div class="kpi-v" id="kv-fr">—</div>
-        <div class="kpi-s">% domanda soddisfatta</div>
-      </div>
-      <div class="kpi" style="border-top-color:var(--warn)">
-        <div class="kpi-l">Mesi Stockout</div>
-        <div class="kpi-v" id="kv-so">—</div>
-        <div class="kpi-s">mesi con stock = 0</div>
-      </div>
-      <div class="kpi" style="border-top-color:var(--purp)">
-        <div class="kpi-l">Pz Scaduti</div>
-        <div class="kpi-v c-pu" id="kv-exp">—</div>
-        <div class="kpi-s">totale periodo</div>
-      </div>
-      <div class="kpi" style="border-top-color:var(--ok)">
-        <div class="kpi-l">Copertura Media</div>
-        <div class="kpi-v" id="kv-cov">—</div>
-        <div class="kpi-s">mesi di stock medio</div>
-      </div>
+```
+<!-- RACCOMANDAZIONE PRINCIPALE (nuova) -->
+<div id="reco-card" class="reco-card" style="display:none">
+  <div class="reco-header">
+    <div class="reco-icon">🎯</div>
+    <div>
+      <div class="reco-title" id="reco-title">Prossimo ordine</div>
+      <div class="reco-sub" id="reco-sub">Piano consigliato per evitare stockout e scadenze</div>
     </div>
+  </div>
+  <div class="reco-grid">
+    <div class="reco-item">
+      <div class="reco-item-l">Ordinare entro</div>
+      <div class="reco-item-v" id="reco-when">—</div>
+      <div class="reco-item-s" id="reco-when-s">—</div>
+    </div>
+    <div class="reco-item">
+      <div class="reco-item-l">Quantità</div>
+      <div class="reco-item-v" id="reco-qty">—</div>
+      <div class="reco-item-s" id="reco-qty-s">—</div>
+    </div>
+  </div>
+  <div class="reco-action" id="reco-action">—</div>
+</div>
 
-    <div class="stit">📉 Scenario Bands — Fill Rate</div>
-    <div class="scen-bands">
-      <div class="scen p10">
-        <div class="scen-t">P10 Pessim.</div>
-        <div class="scen-v" id="sc-p10">—</div>
-        <div class="scen-s">Fill Rate</div>
-      </div>
-      <div class="scen p50">
-        <div class="scen-t">P50 Base</div>
-        <div class="scen-v" id="sc-p50">—</div>
-        <div class="scen-s">Fill Rate</div>
-      </div>
-      <div class="scen p90">
-        <div class="scen-t">P90 Ottim.</div>
-        <div class="scen-v" id="sc-p90">—</div>
-        <div class="scen-s">Fill Rate</div>
-      </div>
-    </div>
+<div class="stit" style="margin-top:0">📊 KPI Principali (P50)</div>
+<div class="kpi-grid">
+  <div class="kpi" id="kpi-fr" style="border-top-color:var(--ok)">
+    <div class="kpi-l">Fill Rate</div>
+    <div class="kpi-v" id="kv-fr">—</div>
+    <div class="kpi-s">% domanda soddisfatta</div>
+  </div>
+  <div class="kpi" style="border-top-color:var(--warn)">
+    <div class="kpi-l">Mesi Stockout</div>
+    <div class="kpi-v" id="kv-so">—</div>
+    <div class="kpi-s">mesi con stock sotto domanda</div>
+  </div>
+  <div class="kpi" style="border-top-color:var(--purp)">
+    <div class="kpi-l">Pz Scaduti</div>
+    <div class="kpi-v c-pu" id="kv-exp">—</div>
+    <div class="kpi-s">totale periodo</div>
+  </div>
+  <div class="kpi" style="border-top-color:var(--ok)">
+    <div class="kpi-l">Copertura Media</div>
+    <div class="kpi-v" id="kv-cov">—</div>
+    <div class="kpi-s">mesi di stock medio</div>
+  </div>
+</div>
 
-    <div class="stit">📈 Grafici</div>
-    <div class="chart-tabs">
-      <button class="ctab active" onclick="switchChart(0,this)">Panoramica</button>
-      <button class="ctab" onclick="switchChart(1,this)">Stock</button>
-      <button class="ctab" onclick="switchChart(2,this)">Dom. vs Vendite</button>
-      <button class="ctab" onclick="switchChart(3,this)">Ordini</button>
-    </div>
-    <div class="chart-box">
-      <div class="cpanel active" id="cp-0"><div class="ch-wrap"><canvas id="ch-overview"></canvas></div></div>
-      <div class="cpanel" id="cp-1"><div class="ch-wrap"><canvas id="ch-stock"></canvas></div></div>
-      <div class="cpanel" id="cp-2"><div class="ch-wrap"><canvas id="ch-demand"></canvas></div></div>
-      <div class="cpanel" id="cp-3"><div class="ch-wrap"><canvas id="ch-orders"></canvas></div></div>
-    </div>
+<!-- PIANO ORDINI (nuovo) -->
+<div class="stit">📅 Piano Ordini Consigliato</div>
+<div class="plan-wrap">
+  <div class="plan-header">
+    <span class="plan-header-t" id="plan-header-t">Prossimi ordini (scenario P50)</span>
+    <span style="font-size:10px;color:var(--t2);font-weight:600" id="plan-count">—</span>
+  </div>
+  <div class="plan-list" id="plan-list">
+    <div class="plan-empty">Nessun ordine pianificato<br><small>Esegui la simulazione per vedere il piano</small></div>
+  </div>
+</div>
 
-    <!-- Tabella collassabile -->
-    <div class="tbl-section">
-      <div class="tbl-toggle" onclick="toggleTbl(this)">
-        <span class="tbl-toggle-t">📋 Dettaglio mensile</span>
-        <span id="tbl-ico">▼</span>
-      </div>
-      <div class="tbl-wrap" id="tbl-wrap">
-        <table>
-          <thead><tr>
-            <th>Mese</th><th>Domanda</th><th>Vendite</th><th>Ordini</th>
-            <th>Arrivi</th><th>Stock fine</th><th>Cop.</th><th>Scaduto</th><th>Stato</th>
-          </tr></thead>
-          <tbody id="tbl-body"></tbody>
-        </table>
-      </div>
-    </div>
+<div class="stit">📉 Scenario Bands — Fill Rate</div>
+<div class="scen-bands">
+  <div class="scen p10">
+    <div class="scen-t">P10 Pessim.</div>
+    <div class="scen-v" id="sc-p10">—</div>
+    <div class="scen-s">Fill Rate</div>
+  </div>
+  <div class="scen p50">
+    <div class="scen-t">P50 Base</div>
+    <div class="scen-v" id="sc-p50">—</div>
+    <div class="scen-s">Fill Rate</div>
+  </div>
+  <div class="scen p90">
+    <div class="scen-t">P90 Ottim.</div>
+    <div class="scen-v" id="sc-p90">—</div>
+    <div class="scen-s">Fill Rate</div>
+  </div>
+</div>
 
-    <!-- Resoconto -->
-    <div class="resc" id="resc" style="display:none">
-      <div class="resc-t">🧭 Resoconto Strategico</div>
-      <div class="resc-grid" id="resc-grid"></div>
-      <div id="alert-box"></div>
-      <div id="giudizio"></div>
-    </div>
+<div class="stit">📈 Grafici</div>
+<div class="chart-tabs">
+  <button class="ctab active" onclick="switchChart(0,this)">Panoramica</button>
+  <button class="ctab" onclick="switchChart(1,this)">Stock</button>
+  <button class="ctab" onclick="switchChart(2,this)">Dom. vs Vendite</button>
+  <button class="ctab" onclick="switchChart(3,this)">Ordini</button>
+</div>
+<div class="chart-box">
+  <div class="cpanel active" id="cp-0"><div class="ch-wrap"><canvas id="ch-overview"></canvas></div></div>
+  <div class="cpanel" id="cp-1"><div class="ch-wrap"><canvas id="ch-stock"></canvas></div></div>
+  <div class="cpanel" id="cp-2"><div class="ch-wrap"><canvas id="ch-demand"></canvas></div></div>
+  <div class="cpanel" id="cp-3"><div class="ch-wrap"><canvas id="ch-orders"></canvas></div></div>
+</div>
+
+<div class="tbl-section">
+  <div class="tbl-toggle" onclick="toggleTbl(this)">
+    <span class="tbl-toggle-t">📋 Dettaglio mensile</span>
+    <span id="tbl-ico">▼</span>
+  </div>
+  <div class="tbl-wrap" id="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Mese</th><th>Domanda</th><th>Vendite</th><th>Ordini</th>
+        <th>Arrivi</th><th>Stock fine</th><th>Cop.</th><th>Scaduto</th><th>Stato</th>
+      </tr></thead>
+      <tbody id="tbl-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="resc" id="resc" style="display:none">
+  <div class="resc-t">🧭 Resoconto Strategico</div>
+  <div class="resc-grid" id="resc-grid"></div>
+  <div id="alert-box"></div>
+  <div id="giudizio"></div>
+</div>
+```
+
   </div>
 
 </main>
 </div>
 
 <!-- Bottom Nav Mobile -->
+
 <nav id="bnav">
   <div class="nav-items">
     <button class="ni" id="ni-0" onclick="mTab(0,this)">
@@ -571,15 +703,35 @@ tbody td:first-child{text-align:left;font-weight:600}
 </nav>
 
 <script>
-/* ══════════════════════════════════════════════
-   SUPPLY CHAIN MONTE CARLO — Sandoz Italia v2
-   ══════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   SUPPLY CHAIN MONTE CARLO — Sandoz Italia v3
+   Focus: QUANDO ordinare + QUANTO ordinare
+   ════════════════════════════════════════════════════════════ */
 
 let simCount = 0;
 let charts = {};
 let stagPreviewChart = null, stagPreviewMobChart = null;
 
 const MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+const MESI_FULL = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno',
+                   'Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+
+/* Z-score per service level (approssimazione inversa CDF normale) */
+function zFromService(sl) {
+  // sl in [0,1]. Approximation for inverse normal CDF (Beasley-Springer)
+  const p = sl;
+  if (p <= 0) return -5; if (p >= 1) return 5;
+  // Simple lookup table for common service levels (più stabile)
+  const tbl = [[.50,0],[.75,.674],[.80,.842],[.85,1.036],[.90,1.282],
+              [.92,1.405],[.95,1.645],[.97,1.881],[.98,2.054],[.99,2.326],[.995,2.576],[.999,3.090]];
+  for (let i=0;i<tbl.length-1;i++){
+    if (p>=tbl[i][0] && p<=tbl[i+1][0]){
+      const t=(p-tbl[i][0])/(tbl[i+1][0]-tbl[i][0]);
+      return tbl[i][1]+t*(tbl[i+1][1]-tbl[i][1]);
+    }
+  }
+  return p<.5?-zFromService(1-p):2.5;
+}
 
 /* ── Init griglia stagionalità ── */
 function initGrid(id, cols) {
@@ -600,10 +752,8 @@ function initGrid(id, cols) {
 
 function onStagChange(el) {
   const v = parseFloat(el.value) || 0;
-  // Colora input
   el.classList.toggle('pos', v > 0);
   el.classList.toggle('neg', v < 0);
-  // Sync tra desktop e mobile
   document.querySelectorAll(`.stag-input[data-m="${el.dataset.m}"]`).forEach(o => {
     if (o !== el) { o.value = el.value; o.classList.toggle('pos',v>0); o.classList.toggle('neg',v<0); }
   });
@@ -611,7 +761,6 @@ function onStagChange(el) {
   updateDemandChips();
 }
 
-/* ── Leggi stagionalità ── */
 function getStag() {
   const map = {};
   document.querySelectorAll('.stag-input').forEach(inp => {
@@ -627,7 +776,6 @@ function updateStagPreview() {
   const stag = getStag();
   const vals = stag.map(s => Math.round(demand * (1 + s)));
   const avg = demand;
-
   const cfg = {
     type: 'bar',
     data: {
@@ -652,14 +800,11 @@ function updateStagPreview() {
       }
     }
   };
-
-  // Desktop
   const elD = document.getElementById('stag-preview-chart');
   if (elD) {
     if (stagPreviewChart) stagPreviewChart.destroy();
     stagPreviewChart = new Chart(elD, JSON.parse(JSON.stringify(cfg)));
   }
-  // Mobile
   const elM = document.getElementById('stag-preview-mob');
   if (elM) {
     if (stagPreviewMobChart) stagPreviewMobChart.destroy();
@@ -667,7 +812,6 @@ function updateStagPreview() {
   }
 }
 
-/* ── Demand chips ── */
 function updateDemandChips() {
   const demand = parseFloat(document.getElementById('p-demand')?.value ||
                             document.getElementById('md-demand')?.value || 15000);
@@ -676,7 +820,6 @@ function updateDemandChips() {
   const stag = getStag();
   const peak = Math.max(...stag)*100;
   const min = Math.min(...stag)*100;
-
   const cm = document.getElementById('chip-media');
   const cv = document.getElementById('chip-var');
   const cp = document.getElementById('chip-peak');
@@ -689,25 +832,25 @@ function updateDemandChips() {
 
 /* ── Parametri ── */
 function getParams() {
-  const g = id => {
-    const el = document.getElementById(id);
-    return el ? el.value : null;
-  };
-  // Leggi da desktop, fallback mobile
+  const g = id => { const el = document.getElementById(id); return el ? el.value : null; };
   const demand = parseFloat(g('p-demand') || g('md-demand') || 15000);
   const variability = parseFloat(g('p-variability') || g('md-variability') || 15) / 100;
   const stock = parseFloat(g('p-stock') || g('m-stock') || 40000);
-  const safetyDays = parseFloat(g('p-safety') || g('m-safety') || 20);
+  const stockAge = parseFloat(g('p-stockAge') || g('m-stockAge') || 18);
+  const service = parseFloat(g('p-service') || g('m-service') || 95) / 100;
   const leadtime = parseInt(g('p-leadtime') || g('m-leadtime') || 8);
   const shelflife = parseInt(g('p-shelflife') || g('m-shelflife') || 24);
+  const slIncoming = parseFloat(g('p-slIncoming') || g('m-slIncoming') || 80) / 100;
   const moq = parseInt(g('p-moq') || g('m-moq') || 20000);
+  const policy = g('p-policy') || g('m-policy') || 'sS';
   const horizon = parseInt(g('p-horizon') || g('m-horizon') || 24);
   const nsim = parseInt(g('p-nsim') || g('m-nsim') || 500);
   const stagionalita = getStag();
-  return { demand, variability, stock, safetyDays, leadtime, shelflife, moq, horizon, nsim, stagionalita };
+  return { demand, variability, stock, stockAge, service, leadtime, shelflife,
+           slIncoming, moq, policy, horizon, nsim, stagionalita };
 }
 
-/* ── Box-Muller ── */
+/* ── Box-Muller (normale standard) ── */
 function randn() {
   let u,v;
   do{u=Math.random()}while(u===0);
@@ -715,433 +858,674 @@ function randn() {
   return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
 }
 
-/* ── Simulazione singola ── */
+/* ═══════════════════════════════════════════════════════════
+   DOMANDA STOCASTICA — formula corretta
+   D_m = mu_m * (1 + CV * Z)  troncato a 0
+   dove mu_m = demand * (1 + stagionalità[m])
+       CV è il coefficiente di variazione (σ/μ)
+       Z ~ N(0,1)
+   ═══════════════════════════════════════════════════════════ */
+function sampleDemand(demand, stagMod, cv) {
+  const mu = demand * (1 + stagMod);
+  const d = mu * (1 + cv * randn());
+  return Math.max(0, d);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CALCOLO ROP (Reorder Point) CORRETTO
+   Considera la domanda attesa nel lead time CON stagionalità
+   ROP = E[D_LT] + z * σ[D_LT]
+   σ[D_LT] = CV * sqrt(sum(μ_i^2)) (assumendo domande mensili indipendenti)
+   ═══════════════════════════════════════════════════════════ */
+function calcROP(m, p) {
+  const z = zFromService(p.service);
+  let expDemLT = 0, sumMu2 = 0;
+  for (let i = 0; i < p.leadtime; i++) {
+    const mu_i = p.demand * (1 + p.stagionalita[(m + i) % 12]);
+    expDemLT += mu_i;
+    sumMu2 += mu_i * mu_i;
+  }
+  const sigmaLT = p.variability * Math.sqrt(sumMu2);
+  return { rop: expDemLT + z * sigmaLT, expDemLT, sigmaLT };
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ORDER-UP-TO LEVEL (S)
+   S deve coprire domanda nel lead time + 1 periodo di review + safety
+   Limitato da shelf-life: S non deve eccedere la domanda attesa
+   nella shelf life residua all'arrivo
+   ═══════════════════════════════════════════════════════════ */
+function calcOrderQty(m, p, inventoryPosition) {
+  const { rop } = calcROP(m, p);
+  const z = zFromService(p.service);
+  // S = domanda attesa (lead time + 1 mese review) + safety stock
+  let expDemLT1 = 0, sumMu2 = 0;
+  const horizonLT1 = p.leadtime + 1;
+  for (let i = 0; i < horizonLT1; i++) {
+    const mu_i = p.demand * (1 + p.stagionalita[(m + i) % 12]);
+    expDemLT1 += mu_i;
+    sumMu2 += mu_i * mu_i;
+  }
+  const sigmaLT1 = p.variability * Math.sqrt(sumMu2);
+  const S = expDemLT1 + z * sigmaLT1;
+
+  // Quantità teorica da ordinare: S - inventoryPosition
+  let qty = Math.max(0, S - inventoryPosition);
+  if (qty <= 0) return 0;
+
+  // Arrotonda a multiplo di MOQ
+  const mult = Math.ceil(qty / p.moq);
+  qty = Math.max(p.moq, mult * p.moq);
+
+  // VINCOLO SHELF LIFE: non ordinare più di quanto si può vendere
+  // prima della scadenza (shelf life residua all'arrivo)
+  const slRes = p.shelflife * p.slIncoming;
+  // Domanda vendibile entro la shelf life residua (dal momento dell'arrivo)
+  const arrivalMonth = m + p.leadtime;
+  let maxVendibile = 0;
+  for (let i = 0; i < slRes; i++) {
+    maxVendibile += p.demand * (1 + p.stagionalita[(arrivalMonth + i) % 12]);
+  }
+  // Lascia un margine: non ordinare più del 90% del vendibile entro scadenza
+  const maxQty = maxVendibile * 0.9;
+  if (qty > maxQty && maxQty >= p.moq) {
+    // Limita al multiplo MOQ più grande che rientra in maxQty
+    qty = Math.floor(maxQty / p.moq) * p.moq;
+  }
+  return qty;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SIMULAZIONE SINGOLA
+   ═══════════════════════════════════════════════════════════ */
 function simSingle(p) {
-  const { demand, variability, stock, safetyDays, leadtime, shelflife, moq, horizon, stagionalita } = p;
-  const safetyMesi = safetyDays / 30;
-  let lotti = [{ qty: stock, expiry: horizon + shelflife }];
+  // Stock iniziale: shelf life residua = p.stockAge (input utente)
+  let lotti = [{ qty: p.stock, expiry: p.stockAge }];
   let inTransito = [];
   const res = [];
   let totD=0, totV=0, totExp=0, totOrd=0, totPzOrd=0, mSO=0;
+  const orderEvents = []; // {month, qty, arrival}
 
-  for (let m=0; m<horizon; m++) {
-    const stagMod = stagionalita[m%12];
-    const domMese = Math.max(0, demand*(1+stagMod)*(1+variability*randn()));
+  for (let m = 0; m < p.horizon; m++) {
+    const stagMod = p.stagionalita[m % 12];
+    const domMese = sampleDemand(p.demand, stagMod, p.variability);
 
-    // Arrivi
-    const arr = inTransito.filter(o=>o.arrivo===m);
-    arr.forEach(a=>lotti.push({qty:a.qty,expiry:a.expiry}));
-    inTransito = inTransito.filter(o=>o.arrivo!==m);
+    // 1. Arrivi del mese
+    const arr = inTransito.filter(o => o.arrivo === m);
+    arr.forEach(a => lotti.push({ qty: a.qty, expiry: a.expiry }));
+    inTransito = inTransito.filter(o => o.arrivo !== m);
+    const arrTot = arr.reduce((s,a) => s+a.qty, 0);
 
-    // Scaduti
-    let expMese=0;
-    lotti = lotti.filter(l=>{ if(l.expiry<=m){expMese+=l.qty;return false}return true });
+    // 2. Scaduti (lotti con expiry <= m attualmente)
+    let expMese = 0;
+    lotti = lotti.filter(l => {
+      if (l.expiry <= m) { expMese += l.qty; return false; }
+      return true;
+    });
 
-    // FIFO: vendi dal più vicino a scadere
-    lotti.sort((a,b)=>a.expiry-b.expiry);
-    let rim=domMese, vend=0;
-    for(let i=0;i<lotti.length&&rim>0;i++){
-      const s=Math.min(lotti[i].qty,rim);
-      lotti[i].qty-=s; vend+=s; rim-=s;
+    // 3. Vendita FIFO (dal più vicino a scadere)
+    lotti.sort((a,b) => a.expiry - b.expiry);
+    let rim = domMese, vend = 0;
+    for (let i = 0; i < lotti.length && rim > 0; i++) {
+      const s = Math.min(lotti[i].qty, rim);
+      lotti[i].qty -= s; vend += s; rim -= s;
     }
-    lotti=lotti.filter(l=>l.qty>0);
+    lotti = lotti.filter(l => l.qty > 0);
 
-    const stockFine=lotti.reduce((s,l)=>s+l.qty,0);
-    const cov=demand>0?stockFine/demand:0;
+    const stockFine = lotti.reduce((s,l) => s+l.qty, 0);
+    const avgMonthlyDem = p.demand; // per KPI copertura
+    const cov = avgMonthlyDem > 0 ? stockFine / avgMonthlyDem : 0;
 
-    // ROP
-    const qIT=inTransito.reduce((s,o)=>s+o.qty,0);
-    const rop=demand*(leadtime+safetyMesi);
-    let ordMese=0;
-    if((stockFine+qIT)<rop){
-      const fab=demand*(leadtime+safetyMesi+1);
-      const qNec=Math.max(0,fab-stockFine-qIT);
-      const mult=Math.ceil(qNec/moq);
-      const qOrd=Math.max(moq,mult*moq);
-      const slRes=shelflife-leadtime;
-      if(slRes>0){
-        inTransito.push({qty:qOrd,arrivo:m+leadtime,expiry:m+leadtime+slRes});
-        ordMese=qOrd; totOrd++; totPzOrd+=qOrd;
+    // 4. Decisione ordine
+    const inTransitoQty = inTransito.reduce((s,o) => s+o.qty, 0);
+    const inventoryPosition = stockFine + inTransitoQty;
+    let ordMese = 0;
+
+    let shouldOrder = false;
+    if (p.policy === 'sS') {
+      // (s,S): ordina se inventory position < ROP
+      const { rop } = calcROP(m, p);
+      shouldOrder = inventoryPosition < rop;
+    } else if (p.policy === 'RQ') {
+      // Review ogni mese, ordina se IP < ROP
+      const { rop } = calcROP(m, p);
+      shouldOrder = inventoryPosition < rop;
+    }
+
+    if (shouldOrder && m + p.leadtime < p.horizon + p.shelflife) {
+      const qOrd = calcOrderQty(m, p, inventoryPosition);
+      if (qOrd > 0) {
+        const slRes = Math.round(p.shelflife * p.slIncoming);
+        const arrivo = m + p.leadtime;
+        inTransito.push({ qty: qOrd, arrivo, expiry: arrivo + slRes });
+        ordMese = qOrd;
+        totOrd++; totPzOrd += qOrd;
+        orderEvents.push({ month: m, qty: qOrd, arrival: arrivo });
       }
     }
 
-    if(stockFine===0||vend<domMese*0.99)mSO++;
-    totD+=domMese; totV+=vend; totExp+=expMese;
+    // 5. Stockout: vendite < domanda reale (con tolleranza 1%)
+    if (vend < domMese * 0.99) mSO++;
 
-    res.push({m,dom:domMese,vend,ord:ordMese,
-              arr:arr.reduce((s,a)=>s+a.qty,0),
-              stock:stockFine,cov,exp:expMese});
-  }
+    totD += domMese; totV += vend; totExp += expMese;
 
-  return {
-    res, fillRate:totD>0?(totV/totD)*100:100,
-    mSO, totExp, totOrd, totPzOrd,
-    covMed:res.reduce((s,r)=>s+r.cov,0)/res.length
-  };
-}
-
-/* ── Monte Carlo ── */
-function monteCarlo(p) {
-  const runs=[];
-  for(let s=0;s<p.nsim;s++) runs.push(simSingle(p));
-
-  function pct(arr,q){
-    const s=[...arr].sort((a,b)=>a-b);
-    return s[Math.max(0,Math.floor(q*s.length)-1)];
-  }
-
-  const monthly=[];
-  for(let m=0;m<p.horizon;m++){
-    const mk=k=>runs.map(r=>r.res[m][k]);
-    monthly.push({
-      m,
-      sP10:pct(mk('stock'),.1), sP50:pct(mk('stock'),.5), sP90:pct(mk('stock'),.9),
-      dP50:pct(mk('dom'),.5), vP50:pct(mk('vend'),.5),
-      oP50:pct(mk('ord'),.5), aP50:pct(mk('arr'),.5),
-      eP50:pct(mk('exp'),.5), covP50:pct(mk('cov'),.5)
+    res.push({
+      m, dom: domMese, vend, ord: ordMese,
+      arr: arrTot, stock: stockFine, cov, exp: expMese,
+      ip: inventoryPosition
     });
   }
 
-  const fr=runs.map(r=>r.fillRate);
+  return {
+    res,
+    fillRate: totD > 0 ? (totV/totD) * 100 : 100,
+    mSO, totExp, totOrd, totPzOrd, orderEvents,
+    covMed: res.reduce((s,r) => s+r.cov, 0) / res.length
+  };
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MONTE CARLO
+   
+   PROBLEMA NOTO: prendere i percentili mensili indipendenti
+   (stock P50 di ogni mese separato) produce serie NON COERENTI:
+   lo stock può "risalire" senza che si veda l'arrivo corrispondente,
+   perché ogni P50 viene da run diverse.
+   
+   FIX: per le serie temporali (stock, ordini, arrivi, domanda, vendite)
+   usiamo UNA SINGOLA RUN RAPPRESENTATIVA — quella con fill rate mediano.
+   Così stock↑ implica SEMPRE un arrivo visibile, stock↓ implica vendite
+   o scadenze, e ordini/arrivi sono legati dal lead time esatto.
+   
+   I percentili (P10/P90) restano per fill rate, stockout, scaduti totali
+   — questi sono singoli numeri per run e hanno senso aggregare.
+   Per lo stock, P10/P90 servono come "banda di incertezza" sul P50
+   della run rappresentativa.
+   ═══════════════════════════════════════════════════════════ */
+function monteCarlo(p) {
+  const runs = [];
+  for (let s = 0; s < p.nsim; s++) runs.push(simSingle(p));
+
+  function pct(arr, q) {
+    const s = [...arr].sort((a,b) => a-b);
+    return s[Math.max(0, Math.floor(q * s.length) - 1)];
+  }
+
+  // Selezione run rappresentativa: quella con fill rate più vicino alla mediana
+  const fr = runs.map(r => r.fillRate);
+  const frMed = pct(fr, .5);
+  let repIdx = 0, bestDiff = Infinity;
+  for (let i = 0; i < runs.length; i++) {
+    const d = Math.abs(runs[i].fillRate - frMed);
+    if (d < bestDiff) { bestDiff = d; repIdx = i; }
+  }
+  const repRun = runs[repIdx];
+
+  // Aggregazione mensile: stock/domanda/vendite/ordini/arrivi/scaduti dalla RUN RAPPRESENTATIVA
+  // Per lo stock aggiungiamo anche P10/P90 come banda di incertezza (solo per grafico)
+  const monthly = [];
+  for (let m = 0; m < p.horizon; m++) {
+    const stockAll = runs.map(r => r.res[m].stock);
+    monthly.push({
+      m,
+      // Serie rappresentativa coerente — QUESTA è la "storia" da mostrare
+      stock: repRun.res[m].stock,
+      dom: repRun.res[m].dom,
+      vend: repRun.res[m].vend,
+      ord: repRun.res[m].ord,
+      arr: repRun.res[m].arr,
+      exp: repRun.res[m].exp,
+      cov: repRun.res[m].cov,
+      // Banda di incertezza sullo stock (solo per visualizzazione scenario)
+      sP10: pct(stockAll, .1),
+      sP90: pct(stockAll, .9),
+      // Probabilità di ordinare in questo mese (tra TUTTE le run)
+      probOrder: runs.filter(r => r.res[m].ord > 0).length / runs.length
+    });
+  }
+
+  // Piano ordini aggregato: aggrega gli ordini di TUTTE le run per mese
+  // Dice "in quale mese, con che probabilità, e con che quantità mediana ordinare"
+  const orderPlan = [];
+  for (let m = 0; m < p.horizon; m++) {
+    const ordersThisMonth = runs.map(r => r.res[m].ord).filter(q => q > 0);
+    if (ordersThisMonth.length > 0) {
+      const prob = ordersThisMonth.length / runs.length;
+      const sorted = [...ordersThisMonth].sort((a,b) => a-b);
+      const medianQty = sorted[Math.floor(sorted.length/2)];
+      orderPlan.push({ month: m, prob, qty: medianQty });
+    }
+  }
+
   return {
     monthly,
-    frP10:pct(fr,.1), frP50:pct(fr,.5), frP90:pct(fr,.9),
-    soP50:pct(runs.map(r=>r.mSO),.5),
-    expP50:pct(runs.map(r=>r.totExp),.5),
-    covP50:pct(runs.map(r=>r.covMed),.5),
-    ordP50:pct(runs.map(r=>r.totOrd),.5),
-    pzOrdP50:pct(runs.map(r=>r.totPzOrd),.5)
+    orderPlan,
+    repIdx,
+    // Percentili aggregati (su totali per run — questi hanno senso)
+    frP10: pct(fr, .1), frP50: pct(fr, .5), frP90: pct(fr, .9),
+    soP50: pct(runs.map(r => r.mSO), .5),
+    expP50: pct(runs.map(r => r.totExp), .5),
+    expP90: pct(runs.map(r => r.totExp), .9),
+    covP50: pct(runs.map(r => r.covMed), .5),
+    ordP50: pct(runs.map(r => r.totOrd), .5),
+    pzOrdP50: pct(runs.map(r => r.totPzOrd), .5)
   };
 }
 
 /* ── Label mesi ── */
 function labelM(h) {
-  const now=new Date(), sm=now.getMonth(), sy=now.getFullYear();
-  return Array.from({length:h},(_,i)=>{
-    const idx=(sm+i)%12;
-    const yr=sy+Math.floor((sm+i)/12);
-    return MESI[idx]+' '+String(yr).slice(-2);
+  const now = new Date(), sm = now.getMonth(), sy = now.getFullYear();
+  return Array.from({length: h}, (_,i) => {
+    const idx = (sm + i) % 12;
+    const yr = sy + Math.floor((sm + i) / 12);
+    return MESI[idx] + ' ' + String(yr).slice(-2);
+  });
+}
+function labelMFull(h) {
+  const now = new Date(), sm = now.getMonth(), sy = now.getFullYear();
+  return Array.from({length: h}, (_,i) => {
+    const idx = (sm + i) % 12;
+    const yr = sy + Math.floor((sm + i) / 12);
+    return MESI_FULL[idx] + ' ' + yr;
   });
 }
 
 /* ── Render KPI ── */
-function renderKPI(r,p) {
-  setV('kv-fr', r.frP50.toFixed(1)+'%');
+function renderKPI(r, p) {
+  setV('kv-fr', r.frP50.toFixed(1) + '%');
   setV('kv-so', r.soP50.toFixed(1));
   setV('kv-exp', numIt(Math.round(r.expP50)));
-  setV('kv-cov', r.covP50.toFixed(1)+' m');
-  const kfr=document.getElementById('kpi-fr');
-  kfr.style.borderTopColor = r.frP50>=97?'var(--ok)':r.frP50>=90?'var(--warn)':'var(--err)';
-  document.getElementById('sc-p10').textContent = r.frP10.toFixed(1)+'%';
-  document.getElementById('sc-p50').textContent = r.frP50.toFixed(1)+'%';
-  document.getElementById('sc-p90').textContent = r.frP90.toFixed(1)+'%';
+  setV('kv-cov', r.covP50.toFixed(1) + ' m');
+  const kfr = document.getElementById('kpi-fr');
+  kfr.style.borderTopColor = r.frP50 >= 97 ? 'var(--ok)' : r.frP50 >= 90 ? 'var(--warn)' : 'var(--err)';
+  document.getElementById('sc-p10').textContent = r.frP10.toFixed(1) + '%';
+  document.getElementById('sc-p50').textContent = r.frP50.toFixed(1) + '%';
+  document.getElementById('sc-p90').textContent = r.frP90.toFixed(1) + '%';
 }
 
-function setV(id,val){
-  const el=document.getElementById(id);
-  if(!el)return;
-  el.textContent=val;
-  el.style.animation='none'; void el.offsetWidth; el.style.animation='';
+function setV(id, val) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = val;
+  el.style.animation = 'none'; void el.offsetWidth; el.style.animation = '';
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PIANO ORDINI — render card raccomandazione + lista
+   ═══════════════════════════════════════════════════════════ */
+function renderOrderPlan(r, p) {
+  const planList = document.getElementById('plan-list');
+  const planCount = document.getElementById('plan-count');
+  const recoCard = document.getElementById('reco-card');
+  const labelsFull = labelMFull(p.horizon);
+  const labelsShort = labelM(p.horizon);
+
+  // Filtra ordini "significativi": probabilità >= 30%
+  const plan = r.orderPlan.filter(o => o.prob >= 0.3);
+
+  if (plan.length === 0) {
+    planList.innerHTML = `<div class="plan-empty">Nessun ordine significativo previsto nell'orizzonte<br><small>Stock attuale sufficiente o policy non attiva</small></div>`;
+    planCount.textContent = '0 ordini';
+    recoCard.style.display = 'none';
+    return;
+  }
+
+  planCount.textContent = plan.length + ' ordini';
+
+  // === RACCOMANDAZIONE PRINCIPALE (primo ordine) ===
+  const firstOrder = plan[0];
+  recoCard.style.display = 'block';
+  const whenTxt = firstOrder.month === 0 ? 'ORA' : `mese ${firstOrder.month + 1}`;
+  const whenSub = firstOrder.month === 0
+    ? `Inoltro immediato — arriva ${labelsFull[p.leadtime] || 'lead time'}`
+    : `${labelsFull[firstOrder.month]} — arriva ${labelsFull[firstOrder.month + p.leadtime] || 'fuori orizzonte'}`;
+
+  document.getElementById('reco-when').textContent = whenTxt;
+  document.getElementById('reco-when-s').textContent = whenSub;
+  document.getElementById('reco-qty').textContent = numIt(Math.round(firstOrder.qty));
+  const lotti = Math.round(firstOrder.qty / p.moq);
+  document.getElementById('reco-qty-s').textContent = `${lotti} ${lotti === 1 ? 'lotto MOQ' : 'lotti MOQ'} da ${numIt(p.moq)}`;
+
+  // Azione consigliata
+  const slRes = Math.round(p.shelflife * p.slIncoming);
+  let actionTxt = '';
+  if (firstOrder.month === 0) {
+    actionTxt = `<strong>Azione:</strong> emetti PO di <strong>${numIt(Math.round(firstOrder.qty))} pz</strong> questa settimana. Richiedi shelf life al ricevimento ≥ ${slRes} mesi (${Math.round(p.slIncoming*100)}% della vita totale).`;
+  } else {
+    actionTxt = `<strong>Prossima azione:</strong> pianifica PO di <strong>${numIt(Math.round(firstOrder.qty))} pz</strong> entro ${labelsFull[firstOrder.month]}. Stock attuale copre fino a quella data.`;
+  }
+  document.getElementById('reco-action').innerHTML = actionTxt;
+
+  // === LISTA COMPLETA ORDINI ===
+  planList.innerHTML = plan.map((o, idx) => {
+    const month = o.month;
+    const arrival = month + p.leadtime;
+    const isUrgent = month <= 1;
+    const confLabel = o.prob >= 0.7 ? 'Alta' : o.prob >= 0.5 ? 'Media' : 'Bassa';
+    const arrivalTxt = arrival < p.horizon
+      ? `arrivo ${labelsShort[arrival]}`
+      : `arrivo fuori orizzonte`;
+    const lotti = Math.round(o.qty / p.moq);
+
+    return `
+      <div class="plan-row">
+        <div class="plan-badge ${isUrgent ? 'urgent' : ''}">
+          ${month === 0 ? 'ORA' : 'M' + (month + 1)}
+          <small>${labelsShort[month].split(' ')[0]}</small>
+        </div>
+        <div class="plan-body">
+          <div class="plan-body-t">${labelsFull[month]}</div>
+          <div class="plan-body-s">${arrivalTxt} · confidenza ${confLabel} (${Math.round(o.prob*100)}%)</div>
+        </div>
+        <div class="plan-qty">
+          <div class="plan-qty-v">${numIt(Math.round(o.qty))}</div>
+          <div class="plan-qty-l">${lotti} × MOQ</div>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 /* ── Render Charts ── */
-function renderCharts(r,p) {
-  const labels=labelM(p.horizon);
-  const safetyLine=labels.map(()=>p.demand*(p.safetyDays/30));
+function renderCharts(r, p) {
+  const labels = labelM(p.horizon);
+  // Linea ROP mensile (dinamica per stagionalità)
+  const ropLine = [];
+  for (let m = 0; m < p.horizon; m++) {
+    const { rop } = calcROP(m, p);
+    ropLine.push(Math.round(rop));
+  }
 
-  Object.values(charts).forEach(c=>{if(c)c.destroy()});
-  charts={};
+  Object.values(charts).forEach(c => { if (c) c.destroy(); });
+  charts = {};
 
-  const base={
-    responsive:true, maintainAspectRatio:false,
-    plugins:{
-      legend:{labels:{color:'#5A7A94',font:{family:'Inter',size:10},boxWidth:10,padding:8}},
-      tooltip:{backgroundColor:'#1A2B3C',titleColor:'#C8E0F4',bodyColor:'#fff',
-               padding:8,cornerRadius:5,
-               callbacks:{label:ctx=>' '+numIt(Math.round(ctx.raw))}}
+  const base = {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { labels: { color: '#5A7A94', font: { family: 'Inter', size: 10 }, boxWidth: 10, padding: 8 } },
+      tooltip: {
+        backgroundColor: '#1A2B3C', titleColor: '#C8E0F4', bodyColor: '#fff',
+        padding: 8, cornerRadius: 5,
+        callbacks: { label: ctx => ' ' + numIt(Math.round(ctx.raw)) }
+      }
     },
-    scales:{
-      x:{ticks:{color:'#5A7A94',maxRotation:45,font:{size:9}},grid:{color:'#D8E4EE'}},
-      y:{ticks:{color:'#5A7A94',font:{size:9},callback:v=>numIt(Math.round(v/1000))+'k'},
-         grid:{color:'#D8E4EE'}}
+    scales: {
+      x: { ticks: { color: '#5A7A94', maxRotation: 45, font: { size: 9 } }, grid: { color: '#D8E4EE' } },
+      y: {
+        ticks: { color: '#5A7A94', font: { size: 9 }, callback: v => numIt(Math.round(v/1000)) + 'k' },
+        grid: { color: '#D8E4EE' }
+      }
     }
   };
 
-  /* ── Grafico 0: PANORAMICA ── */
-  /* Domanda attesa (stag * media) + stock P50 + arrivi + scaduti */
-  const stagMedDom = labels.map((_,i)=>{
-    const stagMod = p.stagionalita[i%12];
-    return Math.round(p.demand*(1+stagMod));
-  });
-
+  /* ── Grafico 0: PANORAMICA (run rappresentativa — serie coerenti) ── */
   charts.overview = new Chart(document.getElementById('ch-overview'), {
     data: {
       labels,
       datasets: [
-        {
-          type:'bar', label:'Domanda prevista',
-          data: r.monthly.map(m=>m.dP50),
-          backgroundColor:'rgba(124,58,237,0.5)', borderRadius:3, yAxisID:'y'
-        },
-        {
-          type:'bar', label:'Arrivi previsti',
-          data: r.monthly.map(m=>m.aP50),
-          backgroundColor:'rgba(0,126,159,0.6)', borderRadius:3, yAxisID:'y'
-        },
-        {
-          type:'bar', label:'Pz scaduti',
-          data: r.monthly.map(m=>m.eP50),
-          backgroundColor:'rgba(208,2,27,0.45)', borderRadius:3, yAxisID:'y'
-        },
-        {
-          type:'line', label:'Stock fine mese (P50)',
-          data: r.monthly.map(m=>m.sP50),
-          borderColor:'#004A85', backgroundColor:'rgba(0,74,133,0.08)',
-          fill:true, tension:0.35, borderWidth:2.5, pointRadius:2.5,
-          pointBackgroundColor:'#004A85', yAxisID:'y2'
-        },
-        {
-          type:'line', label:'Safety stock',
-          data: safetyLine,
-          borderColor:'#F5A623', borderDash:[5,3],
-          fill:false, tension:0, borderWidth:1.5, pointRadius:0, yAxisID:'y2'
-        }
+        { type: 'bar', label: 'Domanda', data: r.monthly.map(m => m.dom),
+          backgroundColor: 'rgba(124,58,237,0.5)', borderRadius: 3, yAxisID: 'y' },
+        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => m.arr),
+          backgroundColor: 'rgba(0,126,159,0.8)', borderRadius: 3, yAxisID: 'y' },
+        { type: 'bar', label: 'Pz scaduti', data: r.monthly.map(m => m.exp),
+          backgroundColor: 'rgba(208,2,27,0.6)', borderRadius: 3, yAxisID: 'y' },
+        { type: 'line', label: 'Stock fine mese', data: r.monthly.map(m => m.stock),
+          borderColor: '#004A85', backgroundColor: 'rgba(0,74,133,0.08)',
+          fill: true, tension: 0.2, borderWidth: 2.5, pointRadius: 2.5,
+          pointBackgroundColor: '#004A85', yAxisID: 'y2' },
+        { type: 'line', label: 'ROP (trigger ordine)', data: ropLine,
+          borderColor: '#F5A623', borderDash: [5,3],
+          fill: false, tension: 0, borderWidth: 1.5, pointRadius: 0, yAxisID: 'y2' }
       ]
     },
-    options:{
+    options: {
       ...base,
-      interaction:{mode:'index',intersect:false},
-      plugins:{
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
         ...base.plugins,
-        legend:{...base.plugins.legend,position:'bottom'},
-        tooltip:{
+        legend: { ...base.plugins.legend, position: 'bottom' },
+        tooltip: {
           ...base.plugins.tooltip,
-          callbacks:{
-            label:ctx=>{
-              const lbl=ctx.dataset.label||'';
-              return ' '+lbl+': '+numIt(Math.round(ctx.raw));
-            }
-          }
+          callbacks: { label: ctx => ' ' + (ctx.dataset.label || '') + ': ' + numIt(Math.round(ctx.raw)) }
         }
       },
-      scales:{
-        x:base.scales.x,
-        y:{...base.scales.y, position:'left',
-           title:{display:true,text:'Quantità (pz)',color:'#5A7A94',font:{size:9}}},
-        y2:{...base.scales.y, position:'right',
-            grid:{drawOnChartArea:false},
-            title:{display:true,text:'Stock (pz)',color:'#004A85',font:{size:9}}}
+      scales: {
+        x: base.scales.x,
+        y: { ...base.scales.y, position: 'left',
+             title: { display: true, text: 'Flussi mensili (pz)', color: '#5A7A94', font: { size: 9 } } },
+        y2: { ...base.scales.y, position: 'right',
+              grid: { drawOnChartArea: false },
+              title: { display: true, text: 'Stock (pz)', color: '#004A85', font: { size: 9 } } }
       }
     }
   });
 
-  /* ── Grafico 1: STOCK ── */
+  /* ── Grafico 1: STOCK con banda di incertezza ── */
   charts.stock = new Chart(document.getElementById('ch-stock'), {
-    type:'line',
-    data:{labels, datasets:[
-      {label:'P90',data:r.monthly.map(m=>m.sP90),
-       borderColor:'rgba(0,174,239,.45)',backgroundColor:'rgba(0,174,239,.1)',
-       fill:'+1',tension:.3,borderWidth:1,pointRadius:0},
-      {label:'P50 Stock',data:r.monthly.map(m=>m.sP50),
-       borderColor:'#004A85',backgroundColor:'rgba(0,74,133,.08)',
-       fill:'+1',tension:.3,borderWidth:2.5,pointRadius:2.5,pointBackgroundColor:'#004A85'},
-      {label:'P10',data:r.monthly.map(m=>m.sP10),
-       borderColor:'rgba(208,2,27,.4)',backgroundColor:'rgba(208,2,27,.05)',
-       fill:false,tension:.3,borderWidth:1,pointRadius:0},
-      {label:'Safety Stock',data:safetyLine,
-       borderColor:'#F5A623',borderDash:[6,3],fill:false,tension:0,borderWidth:1.5,pointRadius:0}
-    ]},
-    options:{...base, interaction:{mode:'index',intersect:false}}
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Banda P90 (ottimistico)', data: r.monthly.map(m => m.sP90),
+          borderColor: 'rgba(0,174,239,.45)', backgroundColor: 'rgba(0,174,239,.12)',
+          fill: '+1', tension: .3, borderWidth: 1, pointRadius: 0 },
+        { label: 'Stock (run rappresentativa)', data: r.monthly.map(m => m.stock),
+          borderColor: '#004A85', backgroundColor: 'rgba(0,74,133,.08)',
+          fill: '+1', tension: .2, borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: '#004A85' },
+        { label: 'Banda P10 (pessimistico)', data: r.monthly.map(m => m.sP10),
+          borderColor: 'rgba(208,2,27,.4)', backgroundColor: 'rgba(208,2,27,.05)',
+          fill: false, tension: .3, borderWidth: 1, pointRadius: 0 },
+        { label: 'ROP', data: ropLine,
+          borderColor: '#F5A623', borderDash: [6,3], fill: false, tension: 0, borderWidth: 1.5, pointRadius: 0 }
+      ]
+    },
+    options: { ...base, interaction: { mode: 'index', intersect: false } }
   });
 
   /* ── Grafico 2: DOM vs VENDITE ── */
   charts.demand = new Chart(document.getElementById('ch-demand'), {
-    type:'bar',
-    data:{labels, datasets:[
-      {label:'Domanda P50',data:r.monthly.map(m=>m.dP50),
-       backgroundColor:'rgba(124,58,237,0.7)',borderRadius:4},
-      {label:'Vendite P50',data:r.monthly.map(m=>m.vP50),
-       backgroundColor:'rgba(0,74,133,0.8)',borderRadius:4}
-    ]},
-    options:{...base, interaction:{mode:'index',intersect:false}}
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Domanda', data: r.monthly.map(m => m.dom),
+          backgroundColor: 'rgba(124,58,237,0.7)', borderRadius: 4 },
+        { label: 'Vendite', data: r.monthly.map(m => m.vend),
+          backgroundColor: 'rgba(0,74,133,0.8)', borderRadius: 4 }
+      ]
+    },
+    options: { ...base, interaction: { mode: 'index', intersect: false } }
   });
 
-  /* ── Grafico 3: ORDINI ── */
+  /* ── Grafico 3: ORDINI & ARRIVI (flusso temporale coerente) ── */
   charts.orders = new Chart(document.getElementById('ch-orders'), {
-    data:{labels, datasets:[
-      {type:'bar',label:'Ordini inviati',data:r.monthly.map(m=>m.oP50),
-       backgroundColor:'rgba(0,74,133,0.7)',borderRadius:4,yAxisID:'y'},
-      {type:'bar',label:'Arrivi',data:r.monthly.map(m=>m.aP50),
-       backgroundColor:'rgba(0,126,159,0.6)',borderRadius:4,yAxisID:'y'},
-      {type:'line',label:'Stock P50',data:r.monthly.map(m=>m.sP50),
-       borderColor:'#00AEEF',fill:false,tension:.3,borderWidth:2,pointRadius:2,yAxisID:'y2'}
-    ]},
-    options:{...base,
-      scales:{x:base.scales.x,
-              y:{...base.scales.y,position:'left'},
-              y2:{...base.scales.y,position:'right',grid:{drawOnChartArea:false}}}}
+    data: {
+      labels,
+      datasets: [
+        { type: 'bar', label: 'Ordini emessi', data: r.monthly.map(m => m.ord),
+          backgroundColor: 'rgba(0,74,133,0.8)', borderRadius: 4, yAxisID: 'y' },
+        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => m.arr),
+          backgroundColor: 'rgba(0,126,159,0.7)', borderRadius: 4, yAxisID: 'y' },
+        { type: 'line', label: 'Stock', data: r.monthly.map(m => m.stock),
+          borderColor: '#00AEEF', fill: false, tension: .2, borderWidth: 2, pointRadius: 2, yAxisID: 'y2' }
+      ]
+    },
+    options: {
+      ...base,
+      scales: {
+        x: base.scales.x,
+        y: { ...base.scales.y, position: 'left' },
+        y2: { ...base.scales.y, position: 'right', grid: { drawOnChartArea: false } }
+      }
+    }
   });
 }
 
 /* ── Render Tabella ── */
-function renderTable(r,p) {
-  const tbody=document.getElementById('tbl-body');
-  tbody.innerHTML='';
-  const labels=labelM(p.horizon);
-  r.monthly.forEach((m,i)=>{
-    const cov=m.covP50;
-    let stato,bc;
-    if(m.sP50===0||m.vP50<m.dP50*.98){stato='STOCKOUT';bc='b-so'}
-    else if(cov<1.5){stato='CRITICO';bc='b-crit'}
-    else if(cov<3){stato='BASSO';bc='b-low'}
-    else{stato='OK';bc='b-ok'}
-    const tr=document.createElement('tr');
-    tr.innerHTML=`<td>${labels[i]}</td>
-      <td>${numIt(Math.round(m.dP50))}</td><td>${numIt(Math.round(m.vP50))}</td>
-      <td>${numIt(Math.round(m.oP50))}</td><td>${numIt(Math.round(m.aP50))}</td>
-      <td>${numIt(Math.round(m.sP50))}</td><td>${cov.toFixed(1)} m</td>
-      <td>${numIt(Math.round(m.eP50))}</td>
+function renderTable(r, p) {
+  const tbody = document.getElementById('tbl-body');
+  tbody.innerHTML = '';
+  const labels = labelM(p.horizon);
+  r.monthly.forEach((m, i) => {
+    const cov = m.cov;
+    let stato, bc;
+    if (m.stock === 0 || m.vend < m.dom * .98) { stato = 'STOCKOUT'; bc = 'b-so'; }
+    else if (cov < 1.5) { stato = 'CRITICO'; bc = 'b-crit'; }
+    else if (cov < 3) { stato = 'BASSO'; bc = 'b-low'; }
+    else { stato = 'OK'; bc = 'b-ok'; }
+    const tr = document.createElement('tr');
+    if (m.ord > 0) tr.classList.add('is-order-month');
+    tr.innerHTML = `<td>${labels[i]}</td>
+      <td>${numIt(Math.round(m.dom))}</td><td>${numIt(Math.round(m.vend))}</td>
+      <td>${m.ord > 0 ? '<strong class="c-p">' + numIt(Math.round(m.ord)) + '</strong>' : '—'}</td>
+      <td>${m.arr > 0 ? numIt(Math.round(m.arr)) : '—'}</td>
+      <td>${numIt(Math.round(m.stock))}</td><td>${cov.toFixed(1)} m</td>
+      <td>${m.exp > 0 ? '<span class="c-pu">' + numIt(Math.round(m.exp)) + '</span>' : '—'}</td>
       <td><span class="bst ${bc}">${stato}</span></td>`;
     tbody.appendChild(tr);
   });
 }
 
 /* ── Render Resoconto ── */
-function renderResoconto(r,p) {
-  const resc=document.getElementById('resc');
-  resc.style.display='block';
-  document.getElementById('resc-grid').innerHTML=`
+function renderResoconto(r, p) {
+  const resc = document.getElementById('resc');
+  resc.style.display = 'block';
+  const z = zFromService(p.service);
+  const { rop } = calcROP(0, p);
+
+  document.getElementById('resc-grid').innerHTML = `
     <div class="ri"><div class="ri-l">Domanda media</div><div class="ri-v">${numIt(p.demand)} pz/m</div></div>
     <div class="ri"><div class="ri-l">Lead time</div><div class="ri-v">${p.leadtime} mesi</div></div>
-    <div class="ri"><div class="ri-l">MOQ</div><div class="ri-v">${numIt(p.moq)} pz</div></div>
-    <div class="ri"><div class="ri-l">Shelf life</div><div class="ri-v">${p.shelflife} mesi</div></div>
+    <div class="ri"><div class="ri-l">Service level</div><div class="ri-v">${Math.round(p.service*100)}% (z=${z.toFixed(2)})</div></div>
+    <div class="ri"><div class="ri-l">ROP iniziale</div><div class="ri-v">${numIt(Math.round(rop))} pz</div></div>
     <div class="ri"><div class="ri-l">N° ordini (P50)</div><div class="ri-v">${Math.round(r.ordP50)}</div></div>
     <div class="ri"><div class="ri-l">Pz ordinati totali</div><div class="ri-v">${numIt(Math.round(r.pzOrdP50))}</div></div>
   `;
 
-  let alerts='';
-  if(r.frP50<95) alerts+=alBox('w','⚠ Fill Rate < 95%: Aumenta ROP o safety stock.');
-  if(r.expP50>p.demand) alerts+=alBox('e','⚠ Scaduti > 1 mese domanda: Riduci multipli MOQ.');
-  if(r.soP50>0) alerts+=alBox('e','🚨 Stockout previsti: Aumenta stock iniziale o riduci lead time.');
-  if(r.frP50>=97&&r.expP50<p.demand*.1&&r.soP50===0)
-    alerts+=alBox('s','✅ Performance ottimale: supply chain ben bilanciata.');
-  document.getElementById('alert-box').innerHTML=alerts;
+  let alerts = '';
+  if (r.frP50 < 95) alerts += alBox('w', `⚠ Fill Rate ${r.frP50.toFixed(1)}% sotto target 95%: alza il service level o riduci MOQ.`);
+  if (r.expP50 > p.demand) alerts += alBox('e', `⚠ Scaduti (${numIt(Math.round(r.expP50))} pz) > 1 mese di domanda: MOQ troppo alto rispetto a shelf life residua.`);
+  if (r.soP50 > 0) alerts += alBox('e', `🚨 Stockout previsti in ${r.soP50.toFixed(1)} mesi: lead time/variabilità non coperti dal safety stock attuale.`);
+  const slRes = p.shelflife * p.slIncoming;
+  if (p.moq / p.demand > slRes * 0.6) alerts += alBox('w', `⚠ MOQ copre ${(p.moq/p.demand).toFixed(1)} mesi di domanda vs ${slRes.toFixed(0)} mesi di shelf life residua: rischio scadenze strutturale.`);
+  if (r.frP50 >= 97 && r.expP50 < p.demand * .1 && r.soP50 === 0)
+    alerts += alBox('s', '✅ Performance ottimale: supply chain ben bilanciata.');
+  document.getElementById('alert-box').innerHTML = alerts;
 
-  let gc,gt;
-  if(r.frP50>=97&&r.soP50===0){gc='gf-ok';gt='✅ Efficiente'}
-  else if(r.frP50>=90){gc='gf-ot';gt='⚠ Ottimizzabile'}
-  else{gc='gf-cr';gt='🚨 Critico'}
-  document.getElementById('giudizio').innerHTML=`<div class="gf ${gc}">${gt}</div>`;
+  let gc, gt;
+  if (r.frP50 >= 97 && r.soP50 === 0 && r.expP50 < p.demand * .2) { gc = 'gf-ok'; gt = '✅ Piano bilanciato — procedi come consigliato'; }
+  else if (r.frP50 >= 90) { gc = 'gf-ot'; gt = '⚠ Ottimizzabile — rivedi parametri critici'; }
+  else { gc = 'gf-cr'; gt = '🚨 Critico — rischio alto di stockout o scadenze'; }
+  document.getElementById('giudizio').innerHTML = `<div class="gf ${gc}">${gt}</div>`;
 }
 
-function alBox(t,msg){
-  const cl={w:'al-w',e:'al-e',s:'al-s'}[t];
+function alBox(t, msg) {
+  const cl = { w: 'al-w', e: 'al-e', s: 'al-s' }[t];
   return `<div class="al ${cl}">${msg}</div>`;
 }
 
 /* ── Esegui simulazione ── */
-function run(goToResults=false) {
+function run(goToResults = false) {
   document.getElementById('ov').classList.remove('hidden');
-  setTimeout(()=>{
-    const p=getParams();
-    const res=monteCarlo(p);
-    simCount+=p.nsim;
-    document.getElementById('sim-count').textContent=numIt(simCount);
-    renderKPI(res,p);
-    renderCharts(res,p);
-    renderTable(res,p);
-    renderResoconto(res,p);
+  setTimeout(() => {
+    const p = getParams();
+    const res = monteCarlo(p);
+    simCount += p.nsim;
+    document.getElementById('sim-count').textContent = numIt(simCount);
+    renderKPI(res, p);
+    renderOrderPlan(res, p);
+    renderCharts(res, p);
+    renderTable(res, p);
+    renderResoconto(res, p);
     document.getElementById('ov').classList.add('hidden');
-    if(goToResults&&window.innerWidth<768) mTab(2,document.getElementById('ni-2'));
-  },30);
+    if (goToResults && window.innerWidth < 768) mTab(2, document.getElementById('ni-2'));
+  }, 30);
 }
 
-/* ── Esempio farmaceutico ── */
-function applyExample(){
-  const ex=[-10,-5,5,8,10,5,-15,-20,5,10,15,20];
-  document.querySelectorAll('.stag-input').forEach(inp=>{
-    inp.value=ex[inp.dataset.m];
-    const v=ex[inp.dataset.m];
-    inp.classList.toggle('pos',v>0);
-    inp.classList.toggle('neg',v<0);
+/* ── Esempio farmaceutico: profilo stagionale realistico ── */
+function applyExample() {
+  // Es: antibiotico — picco autunno/inverno, calo estivo
+  const ex = [10, 5, 0, -5, -10, -15, -20, -15, 0, 10, 20, 25];
+  document.querySelectorAll('.stag-input').forEach(inp => {
+    inp.value = ex[inp.dataset.m];
+    const v = ex[inp.dataset.m];
+    inp.classList.toggle('pos', v > 0);
+    inp.classList.toggle('neg', v < 0);
   });
-  // Dedup: applica ai desktop input che condividono data-m
   updateStagPreview(); updateDemandChips();
 }
 
-function resetStag(){
-  document.querySelectorAll('.stag-input').forEach(inp=>{
-    inp.value=0; inp.classList.remove('pos','neg');
+function resetStag() {
+  document.querySelectorAll('.stag-input').forEach(inp => {
+    inp.value = 0; inp.classList.remove('pos', 'neg');
   });
   updateStagPreview(); updateDemandChips();
 }
 
 /* ── Chart switcher ── */
-function switchChart(idx,btn){
-  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.cpanel').forEach(p=>p.classList.remove('active'));
+function switchChart(idx, btn) {
+  document.querySelectorAll('.ctab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.cpanel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById('cp-'+idx).classList.add('active');
+  document.getElementById('cp-' + idx).classList.add('active');
 }
 
 /* ── Tabella toggle ── */
-function toggleTbl(el){
-  const w=document.getElementById('tbl-wrap');
-  const ico=document.getElementById('tbl-ico');
-  const open=w.classList.contains('open');
-  w.classList.toggle('open',!open);
-  ico.textContent=open?'▼':'▲';
+function toggleTbl(el) {
+  const w = document.getElementById('tbl-wrap');
+  const ico = document.getElementById('tbl-ico');
+  const open = w.classList.contains('open');
+  w.classList.toggle('open', !open);
+  ico.textContent = open ? '▼' : '▲';
 }
 
 /* ── Mobile tabs ── */
-function mTab(idx,btn){
-  const secs=['mobile-params','pane-demand-mob','risultati-section'];
-  const navIds=['ni-0','ni-1','ni-2'];
-  secs.forEach(s=>{const e=document.getElementById(s);if(e)e.style.display='none'});
-  navIds.forEach(n=>{const e=document.getElementById(n);if(e)e.classList.remove('active')});
-  const sec=document.getElementById(secs[idx]);
-  if(sec)sec.style.display='block';
-  if(btn)btn.classList.add('active');
+function mTab(idx, btn) {
+  const secs = ['mobile-params', 'pane-demand-mob', 'risultati-section'];
+  const navIds = ['ni-0', 'ni-1', 'ni-2'];
+  secs.forEach(s => { const e = document.getElementById(s); if (e) e.style.display = 'none'; });
+  navIds.forEach(n => { const e = document.getElementById(n); if (e) e.classList.remove('active'); });
+  const sec = document.getElementById(secs[idx]);
+  if (sec) sec.style.display = 'block';
+  if (btn) btn.classList.add('active');
 }
 
 /* ── Sync mobile → desktop ── */
-function sp(f,v){const e=document.getElementById('p-'+f);if(e)e.value=v}
-function ss(f,v,suf){
-  sp(f,v);
-  const mv=document.getElementById('mv-'+f);if(mv)mv.textContent=v+suf;
-  if(f==='variability')updateDemandChips();
+function sp(f, v) { const e = document.getElementById('p-' + f); if (e) e.value = v; }
+function ss(f, v, suf) {
+  sp(f, v);
+  const mv = document.getElementById('mv-' + f); if (mv) mv.textContent = v + suf;
+  if (f === 'variability') updateDemandChips();
 }
 
 /* ── Bind sliders desktop ── */
-function bindSliders(){
-  [['p-variability','v-variability','%'],
-   ['p-safety','v-safety',' gg'],
-   ['p-leadtime','v-leadtime',' m'],
-   ['p-horizon','v-horizon',' m'],
-   ['p-nsim','v-nsim','']].forEach(([id,vid,suf])=>{
-    const el=document.getElementById(id);
-    const vel=document.getElementById(vid);
-    if(el&&vel) el.addEventListener('input',()=>{ vel.textContent=el.value+suf; });
+function bindSliders() {
+  [['p-variability', 'v-variability', '%'],
+   ['p-service', 'v-service', '%'],
+   ['p-leadtime', 'v-leadtime', ' m'],
+   ['p-horizon', 'v-horizon', ' m'],
+   ['p-nsim', 'v-nsim', '']].forEach(([id, vid, suf]) => {
+    const el = document.getElementById(id);
+    const vel = document.getElementById(vid);
+    if (el && vel) el.addEventListener('input', () => { vel.textContent = el.value + suf; });
   });
-  // p-demand → aggiorna preview
-  const pd=document.getElementById('p-demand');
-  if(pd) pd.addEventListener('input',()=>{updateStagPreview();updateDemandChips();});
+  const pd = document.getElementById('p-demand');
+  if (pd) pd.addEventListener('input', () => { updateStagPreview(); updateDemandChips(); });
 }
 
-/* ── numIt ── */
-function numIt(n){if(isNaN(n))return'—';return n.toLocaleString('it-IT')}
+function numIt(n) { if (isNaN(n)) return '—'; return n.toLocaleString('it-IT'); }
 
 /* ── INIT ── */
-document.addEventListener('DOMContentLoaded',()=>{
-  initGrid('stag-grid-desktop',4);
-  initGrid('stag-grid-mobile',3);
+document.addEventListener('DOMContentLoaded', () => {
+  initGrid('stag-grid-desktop', 4);
+  initGrid('stag-grid-mobile', 3);
   bindSliders();
-  // Mostra risultati su mobile per default
-  document.getElementById('risultati-section').style.display='block';
+  document.getElementById('risultati-section').style.display = 'block';
   updateStagPreview();
   updateDemandChips();
   run();
 });
 </script>
+
 </body>
 </html>
