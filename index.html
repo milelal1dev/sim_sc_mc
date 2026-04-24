@@ -139,8 +139,52 @@ transition:all .2s;-webkit-tap-highlight-color:transparent}
 .btn-export .x-icon{width:20px;height:20px;background:var(–ok);color:#fff;border-radius:3px;
 font-family:var(–fd);font-weight:800;font-size:10px;display:inline-flex;
 align-items:center;justify-content:center;letter-spacing:.3px;flex-shrink:0}
+.btn-optimize{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;
+background:linear-gradient(135deg,#004A85 0%,#0072C6 100%);color:#fff;font-family:var(–fd);
+font-weight:700;font-size:13px;letter-spacing:.4px;border:none;border-radius:var(–r2);
+cursor:pointer;transition:all .2s;-webkit-tap-highlight-color:transparent;
+box-shadow:0 4px 14px rgba(0,74,133,.3)}
+.btn-optimize:hover{box-shadow:0 6px 18px rgba(0,74,133,.4);transform:translateY(-1px)}
+.btn-optimize:active{transform:scale(.98)}
+.btn-optimize:disabled{opacity:.6;cursor:wait}
 .export-note{font-size:11px;color:var(–t2);line-height:1.4}
 .export-note strong{color:var(–p);font-weight:700}
+
+/* ── Optimizer results ── */
+.opt-wrap{background:var(–bg);border:1px solid var(–brd);border-radius:var(–r2);
+overflow:hidden;margin-bottom:16px;box-shadow:var(–sh);display:none}
+.opt-wrap.show{display:block;animation:fsu .3s ease}
+.opt-header{padding:14px 16px;background:linear-gradient(135deg,#002F5C 0%,#004A85 100%);
+color:#fff}
+.opt-header-t{font-family:var(–fd);font-weight:800;font-size:14px;letter-spacing:.3px;
+display:flex;align-items:center;gap:8px}
+.opt-header-s{font-size:11px;opacity:.85;margin-top:3px}
+.opt-best{padding:14px 16px;background:rgba(26,158,111,.08);
+border-bottom:1px solid var(–brd);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.opt-best-badge{background:var(–ok);color:#fff;font-family:var(–fd);font-weight:800;
+font-size:10px;padding:5px 11px;border-radius:9999px;letter-spacing:.5px}
+.opt-best-txt{flex:1;min-width:180px;font-size:12px;color:var(–t1);line-height:1.4}
+.opt-best-txt strong{color:var(–p);font-weight:700}
+.opt-apply{height:36px;padding:0 14px;background:var(–p);color:#fff;font-family:var(–fd);
+font-weight:700;font-size:11px;letter-spacing:.4px;border:none;border-radius:var(–r1);
+cursor:pointer;transition:all .2s;-webkit-tap-highlight-color:transparent;
+display:inline-flex;align-items:center;gap:5px}
+.opt-apply:hover{background:var(–pd)}
+.opt-apply:active{transform:scale(.97)}
+.opt-table-wrap{overflow-x:auto;max-height:340px}
+.opt-table{width:100%;border-collapse:collapse;font-size:11px;min-width:560px}
+.opt-table thead th{background:var(–surf);color:var(–t2);font-weight:700;padding:9px 10px;
+text-align:right;white-space:nowrap;font-size:10px;letter-spacing:.3px;
+text-transform:uppercase;border-bottom:2px solid var(–brd);position:sticky;top:0;z-index:2}
+.opt-table thead th:first-child{text-align:left}
+.opt-table tbody td{padding:9px 10px;border-bottom:1px solid var(–brd);text-align:right;color:var(–t1)}
+.opt-table tbody td:first-child{text-align:left;font-weight:700;color:var(–p);font-family:var(–fd)}
+.opt-table tbody tr.best-row{background:rgba(26,158,111,.08);border-left:3px solid var(–ok)}
+.opt-table tbody tr.best-row td:first-child{color:var(–ok)}
+.opt-table tbody tr.best-row td:first-child::before{content:’★ ’;color:var(–ok)}
+.opt-score-bar{display:inline-block;width:50px;height:5px;background:var(–brd);
+border-radius:9999px;overflow:hidden;vertical-align:middle;margin-left:6px}
+.opt-score-bar-fill{display:block;height:100%;background:linear-gradient(90deg,var(–err),var(–warn),var(–ok))}
 
 /* ── Stagionalità grid ── */
 .stag-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
@@ -242,6 +286,25 @@ font-family:var(–fb);font-size:12px;font-weight:600;border:none;border-radius:
 cursor:pointer;transition:all .2s;white-space:nowrap;padding:0 10px;
 -webkit-tap-highlight-color:transparent}
 .ctab.active{background:var(–p);color:#fff;box-shadow:0 2px 6px rgba(0,74,133,.25)}
+
+/* ── Scenario switcher ── */
+.scen-switch{display:flex;gap:6px;margin-bottom:10px;align-items:center;flex-wrap:wrap}
+.scen-switch-label{font-size:10px;font-weight:700;color:var(–t2);
+text-transform:uppercase;letter-spacing:.6px;margin-right:4px}
+.sbtn{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 12px;
+background:var(–bg);border:1.5px solid var(–brd);border-radius:9999px;
+color:var(–t2);font-family:var(–fb);font-size:11px;font-weight:600;
+cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.sbtn:hover{border-color:var(–pl);color:var(–p)}
+.sbtn .sbtn-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+.sbtn.active{background:var(–p);border-color:var(–p);color:#fff;box-shadow:0 2px 8px rgba(0,74,133,.28)}
+.sbtn.active .sbtn-dot{background:#fff}
+.sbtn[data-sc=“p10”]:not(.active){color:var(–err);border-color:rgba(208,2,27,.3)}
+.sbtn[data-sc=“p10”]:not(.active):hover{background:rgba(208,2,27,.05);border-color:var(–err)}
+.sbtn[data-sc=“p10”].active{background:var(–err);border-color:var(–err);box-shadow:0 2px 8px rgba(208,2,27,.28)}
+.sbtn[data-sc=“p90”]:not(.active){color:var(–ok);border-color:rgba(26,158,111,.3)}
+.sbtn[data-sc=“p90”]:not(.active):hover{background:rgba(26,158,111,.05);border-color:var(–ok)}
+.sbtn[data-sc=“p90”].active{background:var(–ok);border-color:var(–ok);box-shadow:0 2px 8px rgba(26,158,111,.28)}
 
 /* ── Chart container ── */
 .chart-box{background:var(–surf);border:1px solid var(–brd);border-radius:var(–r2);
@@ -452,6 +515,13 @@ height:2px;background:var(–p);border-radius:0 0 2px 2px}
         <option value="RQ">Review periodica (ogni mese)</option>
       </select>
     </div>
+    <div class="sr">
+      <span class="sl">Consolidamento ordini (mesi extra)
+        <span class="il-hint" style="display:block;margin-top:2px">Se >0, accorpa più ordini in uno solo, coprendo N mesi in più</span>
+      </span>
+      <div class="sc"><input type="range" id="p-consolidation" min="0" max="12" value="0" step="1">
+        <span class="sv" id="v-consolidation">0 m</span></div>
+    </div>
   </div>
 
   <!-- Gruppo: Simulazione -->
@@ -522,6 +592,11 @@ height:2px;background:var(–p);border-radius:0 0 2px 2px}
           <option value="sS">(s, S) — Riordino al ROP</option>
           <option value="RQ">Review periodica mensile</option>
         </select>
+      </div>
+      <div class="sr">
+        <span class="sl">Consolidamento ordini (mesi extra)</span>
+        <div class="sc"><input type="range" id="m-consolidation" min="0" max="12" value="0" step="1" oninput="ss('consolidation',this.value,' m')">
+          <span class="sv" id="mv-consolidation">0 m</span></div>
       </div>
     </div>
     <div class="param-card">
@@ -615,13 +690,41 @@ height:2px;background:var(–p);border-radius:0 0 2px 2px}
 
 <!-- Export bar -->
 <div class="export-bar">
+  <button class="btn-optimize" onclick="runOptimizer()" id="btn-optimize">
+    🎯 Trova ottimo
+  </button>
   <button class="btn-export" onclick="exportExcel()" id="btn-export">
     <span class="x-icon">XLS</span>
     Esporta dati Excel
   </button>
   <span class="export-note">
-    Report mensile con <strong>P10 · P50 · P90</strong> per ogni metrica
+    <strong>Trova ottimo</strong>: confronta 13 strategie di consolidamento ordini
   </span>
+</div>
+
+<!-- Optimizer results -->
+<div class="opt-wrap" id="opt-wrap">
+  <div class="opt-header">
+    <div class="opt-header-t">🎯 Ottimizzazione consolidamento ordini</div>
+    <div class="opt-header-s" id="opt-subtitle">Confronto di 13 strategie — fill rate, scadenze, stockout e numero ordini</div>
+  </div>
+  <div class="opt-best" id="opt-best"></div>
+  <div class="opt-table-wrap">
+    <table class="opt-table">
+      <thead>
+        <tr>
+          <th>Consolid.</th>
+          <th>Fill Rate</th>
+          <th>Stockout</th>
+          <th>Scaduti</th>
+          <th>N° Ordini</th>
+          <th>Pz Ordinati</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="opt-tbody"></tbody>
+    </table>
+  </div>
 </div>
 
 <div class="stit" style="margin-top:0">📊 KPI Principali (P50)</div>
@@ -680,6 +783,18 @@ height:2px;background:var(–p);border-radius:0 0 2px 2px}
 </div>
 
 <div class="stit">📈 Grafici</div>
+<div class="scen-switch">
+  <span class="scen-switch-label">Scenario:</span>
+  <button class="sbtn" data-sc="p10" onclick="switchScenario('p10',this)">
+    <span class="sbtn-dot"></span>P10 Pessimistico
+  </button>
+  <button class="sbtn active" data-sc="p50" onclick="switchScenario('p50',this)">
+    <span class="sbtn-dot"></span>P50 Medio
+  </button>
+  <button class="sbtn" data-sc="p90" onclick="switchScenario('p90',this)">
+    <span class="sbtn-dot"></span>P90 Ottimistico
+  </button>
+</div>
 <div class="chart-tabs">
   <button class="ctab active" onclick="switchChart(0,this)">Panoramica</button>
   <button class="ctab" onclick="switchChart(1,this)">Stock</button>
@@ -879,11 +994,12 @@ function getParams() {
   const slIncoming = parseFloat(g('p-slIncoming') || g('m-slIncoming') || 80) / 100;
   const moq = parseInt(g('p-moq') || g('m-moq') || 20000);
   const policy = g('p-policy') || g('m-policy') || 'sS';
+  const consolidation = parseInt(g('p-consolidation') || g('m-consolidation') || 0);
   const horizon = parseInt(g('p-horizon') || g('m-horizon') || 24);
   const nsim = parseInt(g('p-nsim') || g('m-nsim') || 500);
   const stagionalita = getStag();
   return { demand, variability, stock, stockAge, service, leadtime, shelflife,
-           slIncoming, moq, policy, horizon, nsim, stagionalita };
+           slIncoming, moq, policy, consolidation, horizon, nsim, stagionalita };
 }
 
 /* ── Box-Muller (normale standard) ── */
@@ -926,46 +1042,102 @@ function calcROP(m, p) {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   ORDER-UP-TO LEVEL (S)
-   S deve coprire domanda nel lead time + 1 periodo di review + safety
-   Limitato da shelf-life: S non deve eccedere la domanda attesa
-   nella shelf life residua all'arrivo
+   USABLE INVENTORY — proietta scadenze future
+   Dati i lotti (stock fisico con scadenza) + in-transito, calcola
+   quanti pezzi sono effettivamente VENDIBILI prima della scadenza,
+   simulando il consumo FIFO sul profilo di domanda atteso.
+   Ritorna anche la quantità che andrà persa per scadenza se non
+   interveniamo (= pezzi che nessun ordine aggiuntivo può "salvare").
+   
+   Questo è il fix richiesto: il sistema non guarda più solo lo stock
+   totale, ma considera che parte di esso potrebbe scadere inutilizzato.
+   ═══════════════════════════════════════════════════════════ */
+function calcUsableInventory(m, lotti, inTransito, p, horizonMonths) {
+  // Crea lista unica di "disponibilità future" ordinate per scadenza (FIFO)
+  // Ogni elemento: {available_from, qty, expiry}
+  const items = [];
+  lotti.forEach(l => items.push({ from: m, qty: l.qty, expiry: l.expiry }));
+  inTransito.forEach(o => items.push({ from: o.arrivo, qty: o.qty, expiry: o.expiry }));
+  items.sort((a, b) => a.expiry - b.expiry);  // FIFO: il più vicino a scadere esce prima
+
+  let vendibileTot = 0;
+  let scaduteProiettate = 0;
+  // Simula consumo mese per mese per horizonMonths mesi
+  const itemsCopy = items.map(i => ({ ...i }));
+
+  for (let k = 0; k < horizonMonths; k++) {
+    const currentMonth = m + k;
+    const mu = p.demand * (1 + p.stagionalita[currentMonth % 12]);
+
+    // Scarta lotti scaduti a inizio mese
+    itemsCopy.forEach(i => {
+      if (i.qty > 0 && i.expiry <= currentMonth) {
+        scaduteProiettate += i.qty;
+        i.qty = 0;
+      }
+    });
+
+    // Consuma FIFO su lotti già arrivati (from <= currentMonth)
+    let rim = mu;
+    for (let i = 0; i < itemsCopy.length && rim > 0; i++) {
+      if (itemsCopy[i].from > currentMonth || itemsCopy[i].qty <= 0) continue;
+      const s = Math.min(itemsCopy[i].qty, rim);
+      itemsCopy[i].qty -= s;
+      vendibileTot += s;
+      rim -= s;
+    }
+  }
+
+  // Residuo non venduto a fine proiezione che scadrebbe comunque
+  itemsCopy.forEach(i => {
+    if (i.qty > 0 && i.expiry <= m + horizonMonths) {
+      scaduteProiettate += i.qty;
+    }
+  });
+
+  return { vendibileTot, scaduteProiettate };
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ORDER-UP-TO LEVEL (S) con CONSOLIDAMENTO
+   Base: S copre domanda nel lead time + 1 mese review + safety
+   Con consolidation=K: S copre LT + 1 + K mesi (ordine più grande
+   per coprire K mesi in più, saltando i riordini intermedi)
+   Vincolo shelf life sempre attivo
    ═══════════════════════════════════════════════════════════ */
 function calcOrderQty(m, p, inventoryPosition) {
-  const { rop } = calcROP(m, p);
   const z = zFromService(p.service);
-  // S = domanda attesa (lead time + 1 mese review) + safety stock
-  let expDemLT1 = 0, sumMu2 = 0;
-  const horizonLT1 = p.leadtime + 1;
-  for (let i = 0; i < horizonLT1; i++) {
+  const consolidation = p.consolidation || 0;
+  // Copertura = lead time + 1 mese review + finestra consolidamento
+  const horizonCov = p.leadtime + 1 + consolidation;
+  let expDemCov = 0, sumMu2 = 0;
+  for (let i = 0; i < horizonCov; i++) {
     const mu_i = p.demand * (1 + p.stagionalita[(m + i) % 12]);
-    expDemLT1 += mu_i;
+    expDemCov += mu_i;
     sumMu2 += mu_i * mu_i;
   }
-  const sigmaLT1 = p.variability * Math.sqrt(sumMu2);
-  const S = expDemLT1 + z * sigmaLT1;
+  const sigmaCov = p.variability * Math.sqrt(sumMu2);
+  const S = expDemCov + z * sigmaCov;
 
   // Quantità teorica da ordinare: S - inventoryPosition
   let qty = Math.max(0, S - inventoryPosition);
   if (qty <= 0) return 0;
 
-  // Arrotonda a multiplo di MOQ
+  // Arrotonda a multiplo di MOQ (arrotondamento per eccesso)
   const mult = Math.ceil(qty / p.moq);
   qty = Math.max(p.moq, mult * p.moq);
 
   // VINCOLO SHELF LIFE: non ordinare più di quanto si può vendere
   // prima della scadenza (shelf life residua all'arrivo)
   const slRes = p.shelflife * p.slIncoming;
-  // Domanda vendibile entro la shelf life residua (dal momento dell'arrivo)
   const arrivalMonth = m + p.leadtime;
   let maxVendibile = 0;
   for (let i = 0; i < slRes; i++) {
     maxVendibile += p.demand * (1 + p.stagionalita[(arrivalMonth + i) % 12]);
   }
-  // Lascia un margine: non ordinare più del 90% del vendibile entro scadenza
+  // Lascia margine 10%: non ordinare più del 90% del vendibile entro scadenza
   const maxQty = maxVendibile * 0.9;
   if (qty > maxQty && maxQty >= p.moq) {
-    // Limita al multiplo MOQ più grande che rientra in maxQty
     qty = Math.floor(maxQty / p.moq) * p.moq;
   }
   return qty;
@@ -1012,18 +1184,22 @@ function simSingle(p) {
     const avgMonthlyDem = p.demand; // per KPI copertura
     const cov = avgMonthlyDem > 0 ? stockFine / avgMonthlyDem : 0;
 
-    // 4. Decisione ordine
+    // 4. Decisione ordine — considera scadenze future dei lotti attuali
     const inTransitoQty = inTransito.reduce((s,o) => s+o.qty, 0);
-    const inventoryPosition = stockFine + inTransitoQty;
-    let ordMese = 0;
+    const inventoryPositionRaw = stockFine + inTransitoQty;
 
+    // Inventory position "effettiva" = vendibile entro LT+1+consolidation mesi
+    // (scontando pezzi che scadranno prima di essere venduti in FIFO)
+    const consolidation = p.consolidation || 0;
+    const lookahead = p.leadtime + 1 + consolidation;
+    const { vendibileTot, scaduteProiettate } = calcUsableInventory(m, lotti, inTransito, p, lookahead);
+    // IP effettiva = quantità realmente disponibile alla domanda nell'orizzonte
+    const inventoryPosition = vendibileTot;
+
+    let ordMese = 0;
     let shouldOrder = false;
-    if (p.policy === 'sS') {
-      // (s,S): ordina se inventory position < ROP
-      const { rop } = calcROP(m, p);
-      shouldOrder = inventoryPosition < rop;
-    } else if (p.policy === 'RQ') {
-      // Review ogni mese, ordina se IP < ROP
+    if (p.policy === 'sS' || p.policy === 'RQ') {
+      // Confronta IP EFFETTIVA con ROP (non IP grezzo)
       const { rop } = calcROP(m, p);
       shouldOrder = inventoryPosition < rop;
     }
@@ -1087,19 +1263,29 @@ function monteCarlo(p) {
     return s[Math.max(0, Math.floor(q * s.length) - 1)];
   }
 
-  // Selezione run rappresentativa: quella con fill rate più vicino alla mediana
+  // Selezione run rappresentative: 3 scenari coerenti (pessimistico/medio/ottimistico)
+  // Ognuna è una run REALE scelta tra quelle col fill rate più vicino ai percentili 10/50/90
   const fr = runs.map(r => r.fillRate);
-  const frMed = pct(fr, .5);
-  let repIdx = 0, bestDiff = Infinity;
-  for (let i = 0; i < runs.length; i++) {
-    const d = Math.abs(runs[i].fillRate - frMed);
-    if (d < bestDiff) { bestDiff = d; repIdx = i; }
+  function findRepRun(targetFR) {
+    let idx = 0, best = Infinity;
+    for (let i = 0; i < runs.length; i++) {
+      const d = Math.abs(runs[i].fillRate - targetFR);
+      if (d < best) { best = d; idx = i; }
+    }
+    return idx;
   }
-  const repRun = runs[repIdx];
+  const frP10 = pct(fr, .1), frP50 = pct(fr, .5), frP90 = pct(fr, .9);
+  const repIdxP10 = findRepRun(frP10);
+  const repIdxP50 = findRepRun(frP50);
+  const repIdxP90 = findRepRun(frP90);
+  const repRunP10 = runs[repIdxP10];
+  const repRunP50 = runs[repIdxP50];
+  const repRunP90 = runs[repIdxP90];
 
   // Aggregazione mensile
-  // - chiavi "lisce" (stock, dom, ...) = run rappresentativa, per grafici/tabella COERENTI
-  // - chiavi pXX = percentili mensili per EXPORT (ogni metrica P10/P50/P90 indipendenti)
+  // - chiavi "lisce" (stock, dom, ...) = run rappresentativa P50, default per grafici
+  // - chiavi scenario.{p10|p50|p90} = 3 serie coerenti per switcher grafico
+  // - chiavi legacy pXX = percentili mensili indipendenti (export Excel)
   const monthly = [];
   for (let m = 0; m < p.horizon; m++) {
     const stockAll = runs.map(r => r.res[m].stock);
@@ -1111,22 +1297,38 @@ function monteCarlo(p) {
 
     monthly.push({
       m,
-      // Serie rappresentativa (grafici e tabella)
-      stock: repRun.res[m].stock,
-      dom: repRun.res[m].dom,
-      vend: repRun.res[m].vend,
-      ord: repRun.res[m].ord,
-      arr: repRun.res[m].arr,
-      exp: repRun.res[m].exp,
-      cov: repRun.res[m].cov,
-      // Percentili per export (scenario bands su ogni metrica)
+      // Serie rappresentativa P50 (default — compatibilità render esistenti)
+      stock: repRunP50.res[m].stock,
+      dom: repRunP50.res[m].dom,
+      vend: repRunP50.res[m].vend,
+      ord: repRunP50.res[m].ord,
+      arr: repRunP50.res[m].arr,
+      exp: repRunP50.res[m].exp,
+      cov: repRunP50.res[m].cov,
+      // 3 scenari coerenti (ognuno da una run reale)
+      scP10: {
+        stock: repRunP10.res[m].stock, dom: repRunP10.res[m].dom, vend: repRunP10.res[m].vend,
+        ord: repRunP10.res[m].ord, arr: repRunP10.res[m].arr, exp: repRunP10.res[m].exp,
+        cov: repRunP10.res[m].cov
+      },
+      scP50: {
+        stock: repRunP50.res[m].stock, dom: repRunP50.res[m].dom, vend: repRunP50.res[m].vend,
+        ord: repRunP50.res[m].ord, arr: repRunP50.res[m].arr, exp: repRunP50.res[m].exp,
+        cov: repRunP50.res[m].cov
+      },
+      scP90: {
+        stock: repRunP90.res[m].stock, dom: repRunP90.res[m].dom, vend: repRunP90.res[m].vend,
+        ord: repRunP90.res[m].ord, arr: repRunP90.res[m].arr, exp: repRunP90.res[m].exp,
+        cov: repRunP90.res[m].cov
+      },
+      // Percentili mensili indipendenti (per export Excel)
       stockP10: pct(stockAll, .1), stockP50: pct(stockAll, .5), stockP90: pct(stockAll, .9),
       domP10:   pct(domAll, .1),   domP50:   pct(domAll, .5),   domP90:   pct(domAll, .9),
       vendP10:  pct(vendAll, .1),  vendP50:  pct(vendAll, .5),  vendP90:  pct(vendAll, .9),
       ordP10:   pct(ordAll, .1),   ordP50:   pct(ordAll, .5),   ordP90:   pct(ordAll, .9),
       arrP10:   pct(arrAll, .1),   arrP50:   pct(arrAll, .5),   arrP90:   pct(arrAll, .9),
       expP10:   pct(expAll, .1),   expP50:   pct(expAll, .5),   expP90:   pct(expAll, .9),
-      // Alias legacy per banda stock nei grafici
+      // Alias legacy banda stock
       sP10: pct(stockAll, .1),
       sP90: pct(stockAll, .9),
       probOrder: runs.filter(r => r.res[m].ord > 0).length / runs.length
@@ -1149,16 +1351,75 @@ function monteCarlo(p) {
   return {
     monthly,
     orderPlan,
-    repIdx,
+    repIdxP10, repIdxP50, repIdxP90,
     // Percentili aggregati (su totali per run — questi hanno senso)
-    frP10: pct(fr, .1), frP50: pct(fr, .5), frP90: pct(fr, .9),
+    frP10, frP50, frP90,
+    soP10: pct(runs.map(r => r.mSO), .1),
     soP50: pct(runs.map(r => r.mSO), .5),
+    soP90: pct(runs.map(r => r.mSO), .9),
+    expP10: pct(runs.map(r => r.totExp), .1),
     expP50: pct(runs.map(r => r.totExp), .5),
     expP90: pct(runs.map(r => r.totExp), .9),
     covP50: pct(runs.map(r => r.covMed), .5),
     ordP50: pct(runs.map(r => r.totOrd), .5),
     pzOrdP50: pct(runs.map(r => r.totPzOrd), .5)
   };
+}
+
+/* ═══════════════════════════════════════════════════════════
+   OTTIMIZZATORE AUTOMATICO
+   Prova diverse combinazioni di consolidamento (0, 1, 2, ..., 12 mesi)
+   e sceglie quella con miglior SCORE COMPOSITO.
+   
+   Score (più alto = meglio):
+     score = fillRate - penalità_scadute - penalità_stockout - penalità_ordini
+   
+   Le penalità pesano scadenze e stockout molto di più perché sono
+   i rischi che l'utente vuole eliminare. Meno ordini è un bonus
+   minore (efficienza operativa).
+   ═══════════════════════════════════════════════════════════ */
+function optimizeConsolidation(baseParams, maxConsolidation = 12, nsimReduced = 200) {
+  const results = [];
+  // Usiamo nsimReduced per velocità (ottimizzatore gira più simulazioni)
+  for (let cons = 0; cons <= maxConsolidation; cons++) {
+    const p = { ...baseParams, consolidation: cons, nsim: nsimReduced };
+    const r = monteCarlo(p);
+
+    // Metriche chiave
+    const fillRate = r.frP50;        // %
+    const stockoutMonths = r.soP50;  // # mesi
+    const expiredP50 = r.expP50;     // pz
+    const nOrders = r.ordP50;        // #
+    const annualDemand = p.demand * 12;
+
+    // Normalizzazioni su base annua per confronti equi
+    const expRatio = expiredP50 / annualDemand;       // % domanda annua scaduta
+    const soRatio = stockoutMonths / p.horizon;        // % periodo in stockout
+
+    // Score composito (pesi calibrati)
+    //  - fill rate: base (max 100)
+    //  - stockout: penalità forte (ogni mese stockout = -20 punti)
+    //  - scadute: penalità forte (1% domanda annua scaduta = -30 punti)
+    //  - ordini: bonus efficienza (ogni ordine in meno = +0.5 punti, max 6 pt)
+    const score = fillRate
+                - stockoutMonths * 20
+                - expRatio * 3000
+                - Math.min(6, Math.max(0, (12 - nOrders) * 0.5));
+
+    results.push({
+      consolidation: cons,
+      fillRate,
+      stockoutMonths,
+      expired: expiredP50,
+      nOrders,
+      pzOrdTot: r.pzOrdP50,
+      score: Math.round(score * 10) / 10
+    });
+  }
+
+  // Trova il migliore per score
+  const best = [...results].sort((a,b) => b.score - a.score)[0];
+  return { results, best };
 }
 
 /* ── Label mesi ── */
@@ -1276,7 +1537,12 @@ function renderOrderPlan(r, p) {
 }
 
 /* ── Render Charts ── */
-function renderCharts(r, p) {
+function renderCharts(r, p, scenario) {
+  scenario = scenario || 'p50';
+  const scKey = 'scP' + scenario.slice(1);  // 'scP10' | 'scP50' | 'scP90'
+  // Estrae la serie selezionata con fallback robusto alla run mediana
+  const pick = (m, k) => (m[scKey] && m[scKey][k] !== undefined) ? m[scKey][k] : m[k];
+
   const labels = labelM(p.horizon);
   // Linea ROP mensile (dinamica per stagionalità)
   const ropLine = [];
@@ -1307,21 +1573,25 @@ function renderCharts(r, p) {
     }
   };
 
-  /* ── Grafico 0: PANORAMICA (run rappresentativa — serie coerenti) ── */
+  /* ── Grafico 0: PANORAMICA (scenario selezionato — serie coerenti) ── */
+  const scLabel = scenario === 'p10' ? 'Pessimistico' : scenario === 'p90' ? 'Ottimistico' : 'Medio';
+  const scColor = scenario === 'p10' ? '#D0021B' : scenario === 'p90' ? '#1A9E6F' : '#004A85';
+  const scColorFill = scenario === 'p10' ? 'rgba(208,2,27,0.08)' : scenario === 'p90' ? 'rgba(26,158,111,0.08)' : 'rgba(0,74,133,0.08)';
+
   charts.overview = new Chart(document.getElementById('ch-overview'), {
     data: {
       labels,
       datasets: [
-        { type: 'bar', label: 'Domanda', data: r.monthly.map(m => m.dom),
+        { type: 'bar', label: 'Domanda', data: r.monthly.map(m => pick(m, 'dom')),
           backgroundColor: 'rgba(124,58,237,0.5)', borderRadius: 3, yAxisID: 'y' },
-        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => m.arr),
+        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => pick(m, 'arr')),
           backgroundColor: 'rgba(0,126,159,0.8)', borderRadius: 3, yAxisID: 'y' },
-        { type: 'bar', label: 'Pz scaduti', data: r.monthly.map(m => m.exp),
+        { type: 'bar', label: 'Pz scaduti', data: r.monthly.map(m => pick(m, 'exp')),
           backgroundColor: 'rgba(208,2,27,0.6)', borderRadius: 3, yAxisID: 'y' },
-        { type: 'line', label: 'Stock fine mese', data: r.monthly.map(m => m.stock),
-          borderColor: '#004A85', backgroundColor: 'rgba(0,74,133,0.08)',
+        { type: 'line', label: `Stock fine mese (${scLabel})`, data: r.monthly.map(m => pick(m, 'stock')),
+          borderColor: scColor, backgroundColor: scColorFill,
           fill: true, tension: 0.2, borderWidth: 2.5, pointRadius: 2.5,
-          pointBackgroundColor: '#004A85', yAxisID: 'y2' },
+          pointBackgroundColor: scColor, yAxisID: 'y2' },
         { type: 'line', label: 'ROP (trigger ordine)', data: ropLine,
           borderColor: '#F5A623', borderDash: [5,3],
           fill: false, tension: 0, borderWidth: 1.5, pointRadius: 0, yAxisID: 'y2' }
@@ -1344,58 +1614,70 @@ function renderCharts(r, p) {
              title: { display: true, text: 'Flussi mensili (pz)', color: '#5A7A94', font: { size: 9 } } },
         y2: { ...base.scales.y, position: 'right',
               grid: { drawOnChartArea: false },
-              title: { display: true, text: 'Stock (pz)', color: '#004A85', font: { size: 9 } } }
+              title: { display: true, text: 'Stock (pz)', color: scColor, font: { size: 9 } } }
       }
     }
   });
 
-  /* ── Grafico 1: STOCK con banda di incertezza ── */
+  /* ── Grafico 1: STOCK — 3 scenari SEMPRE visibili ── */
   charts.stock = new Chart(document.getElementById('ch-stock'), {
     type: 'line',
     data: {
       labels,
       datasets: [
-        { label: 'Banda P90 (ottimistico)', data: r.monthly.map(m => m.sP90),
-          borderColor: 'rgba(0,174,239,.45)', backgroundColor: 'rgba(0,174,239,.12)',
-          fill: '+1', tension: .3, borderWidth: 1, pointRadius: 0 },
-        { label: 'Stock (run rappresentativa)', data: r.monthly.map(m => m.stock),
-          borderColor: '#004A85', backgroundColor: 'rgba(0,74,133,.08)',
-          fill: '+1', tension: .2, borderWidth: 2.5, pointRadius: 2.5, pointBackgroundColor: '#004A85' },
-        { label: 'Banda P10 (pessimistico)', data: r.monthly.map(m => m.sP10),
-          borderColor: 'rgba(208,2,27,.4)', backgroundColor: 'rgba(208,2,27,.05)',
-          fill: false, tension: .3, borderWidth: 1, pointRadius: 0 },
-        { label: 'ROP', data: ropLine,
+        { label: 'P90 Ottimistico', data: r.monthly.map(m => m.scP90 ? m.scP90.stock : m.stock),
+          borderColor: '#1A9E6F', backgroundColor: 'rgba(26,158,111,.08)',
+          fill: false, tension: .2, borderWidth: 2,
+          pointRadius: scenario === 'p90' ? 3 : 1.5,
+          pointBackgroundColor: '#1A9E6F',
+          borderDash: scenario === 'p90' ? [] : [3,2] },
+        { label: 'P50 Medio', data: r.monthly.map(m => m.scP50 ? m.scP50.stock : m.stock),
+          borderColor: '#004A85', backgroundColor: 'rgba(0,74,133,.1)',
+          fill: scenario === 'p50', tension: .2, borderWidth: 2.5,
+          pointRadius: scenario === 'p50' ? 3 : 1.5,
+          pointBackgroundColor: '#004A85',
+          borderDash: scenario === 'p50' ? [] : [3,2] },
+        { label: 'P10 Pessimistico', data: r.monthly.map(m => m.scP10 ? m.scP10.stock : m.stock),
+          borderColor: '#D0021B', backgroundColor: 'rgba(208,2,27,.08)',
+          fill: false, tension: .2, borderWidth: 2,
+          pointRadius: scenario === 'p10' ? 3 : 1.5,
+          pointBackgroundColor: '#D0021B',
+          borderDash: scenario === 'p10' ? [] : [3,2] },
+        { label: 'ROP (trigger)', data: ropLine,
           borderColor: '#F5A623', borderDash: [6,3], fill: false, tension: 0, borderWidth: 1.5, pointRadius: 0 }
       ]
     },
-    options: { ...base, interaction: { mode: 'index', intersect: false } }
+    options: { ...base,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { ...base.plugins, legend: { ...base.plugins.legend, position: 'bottom' } }
+    }
   });
 
-  /* ── Grafico 2: DOM vs VENDITE ── */
+  /* ── Grafico 2: DOM vs VENDITE (scenario) ── */
   charts.demand = new Chart(document.getElementById('ch-demand'), {
     type: 'bar',
     data: {
       labels,
       datasets: [
-        { label: 'Domanda', data: r.monthly.map(m => m.dom),
+        { label: `Domanda (${scLabel})`, data: r.monthly.map(m => pick(m, 'dom')),
           backgroundColor: 'rgba(124,58,237,0.7)', borderRadius: 4 },
-        { label: 'Vendite', data: r.monthly.map(m => m.vend),
-          backgroundColor: 'rgba(0,74,133,0.8)', borderRadius: 4 }
+        { label: `Vendite (${scLabel})`, data: r.monthly.map(m => pick(m, 'vend')),
+          backgroundColor: scColor, borderRadius: 4 }
       ]
     },
     options: { ...base, interaction: { mode: 'index', intersect: false } }
   });
 
-  /* ── Grafico 3: ORDINI & ARRIVI (flusso temporale coerente) ── */
+  /* ── Grafico 3: ORDINI & ARRIVI (scenario coerente) ── */
   charts.orders = new Chart(document.getElementById('ch-orders'), {
     data: {
       labels,
       datasets: [
-        { type: 'bar', label: 'Ordini emessi', data: r.monthly.map(m => m.ord),
-          backgroundColor: 'rgba(0,74,133,0.8)', borderRadius: 4, yAxisID: 'y' },
-        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => m.arr),
+        { type: 'bar', label: 'Ordini emessi', data: r.monthly.map(m => pick(m, 'ord')),
+          backgroundColor: scColor, borderRadius: 4, yAxisID: 'y' },
+        { type: 'bar', label: 'Arrivi', data: r.monthly.map(m => pick(m, 'arr')),
           backgroundColor: 'rgba(0,126,159,0.7)', borderRadius: 4, yAxisID: 'y' },
-        { type: 'line', label: 'Stock', data: r.monthly.map(m => m.stock),
+        { type: 'line', label: 'Stock', data: r.monthly.map(m => pick(m, 'stock')),
           borderColor: '#00AEEF', fill: false, tension: .2, borderWidth: 2, pointRadius: 2, yAxisID: 'y2' }
       ]
     },
@@ -1617,6 +1899,116 @@ function exportExcel() {
   XLSX.writeFile(wb, filename);
 }
 
+/* ── Scenario corrente selezionato nei grafici ── */
+let currentScenario = 'p50';
+
+/* ═══════════════════════════════════════════════════════════
+   RUN OPTIMIZER — UI
+   Lancia l'ottimizzatore e mostra la tabella comparativa
+   ═══════════════════════════════════════════════════════════ */
+function runOptimizer() {
+  if (!lastParams) {
+    alert('Esegui prima una simulazione base');
+    return;
+  }
+  const btn = document.getElementById('btn-optimize');
+  btn.disabled = true;
+  btn.textContent = '⏳ Elaborazione...';
+  document.getElementById('ov').classList.remove('hidden');
+  document.querySelector('.ov-txt').textContent = 'Ottimizzazione in corso…';
+
+  // Async con setTimeout per lasciar aggiornare UI
+  setTimeout(() => {
+    try {
+      // Uso gli stessi parametri della sim base ma con nsim ridotto per velocità
+      const { results, best } = optimizeConsolidation(lastParams, 12, 200);
+      renderOptimizer(results, best);
+    } catch(e) {
+      console.error(e);
+      alert('Errore durante l\'ottimizzazione: ' + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '🎯 Trova ottimo';
+      document.querySelector('.ov-txt').textContent = 'Simulazione in corso…';
+      document.getElementById('ov').classList.add('hidden');
+    }
+  }, 50);
+}
+
+function renderOptimizer(results, best) {
+  const wrap = document.getElementById('opt-wrap');
+  const tbody = document.getElementById('opt-tbody');
+  const bestBox = document.getElementById('opt-best');
+  const subtitle = document.getElementById('opt-subtitle');
+
+  wrap.classList.add('show');
+
+  // Subtitle dinamico
+  subtitle.textContent = `Test su ${results.length} strategie — parametri attuali`;
+
+  // Best summary
+  const currentCons = lastParams.consolidation || 0;
+  const isAlreadyBest = best.consolidation === currentCons;
+  bestBox.innerHTML = `
+    <span class="opt-best-badge">OTTIMO</span>
+    <div class="opt-best-txt">
+      ${isAlreadyBest
+        ? `Stai già usando la strategia ottimale: <strong>consolidamento ${best.consolidation} mesi</strong>. Fill rate ${best.fillRate.toFixed(1)}%, ${Math.round(best.nOrders)} ordini nel periodo.`
+        : `Strategia ottimale: <strong>consolidamento ${best.consolidation} mesi</strong>. Rispetto alla config. attuale (${currentCons}m) ottieni fill rate ${best.fillRate.toFixed(1)}%, ${Math.round(best.nOrders)} ordini, ${numIt(Math.round(best.expired))} pz scaduti.`}
+    </div>
+    ${isAlreadyBest
+      ? ''
+      : `<button class="opt-apply" onclick="applyOptimum(${best.consolidation})">✓ Applica ${best.consolidation}m</button>`}
+  `;
+
+  // Tabella
+  // Calcolo range score per barre
+  const scoreMin = Math.min(...results.map(r => r.score));
+  const scoreMax = Math.max(...results.map(r => r.score));
+  const scoreRange = Math.max(1, scoreMax - scoreMin);
+
+  tbody.innerHTML = results.map(r => {
+    const isBest = r.consolidation === best.consolidation;
+    const consLabel = r.consolidation === 0 ? 'Nessuno' : `+${r.consolidation} m`;
+    const frColor = r.fillRate >= 97 ? 'c-ok' : r.fillRate >= 90 ? 'c-w' : 'c-err';
+    const soColor = r.stockoutMonths === 0 ? 'c-ok' : r.stockoutMonths < 1 ? 'c-w' : 'c-err';
+    const expColor = r.expired === 0 ? 'c-ok' : r.expired < lastParams.demand ? 'c-w' : 'c-err';
+    const scorePct = ((r.score - scoreMin) / scoreRange) * 100;
+
+    return `
+      <tr class="${isBest ? 'best-row' : ''}">
+        <td>${consLabel}</td>
+        <td class="${frColor}"><strong>${r.fillRate.toFixed(1)}%</strong></td>
+        <td class="${soColor}">${r.stockoutMonths.toFixed(1)} m</td>
+        <td class="${expColor}">${numIt(Math.round(r.expired))}</td>
+        <td>${Math.round(r.nOrders)}</td>
+        <td>${numIt(Math.round(r.pzOrdTot))}</td>
+        <td>
+          ${r.score.toFixed(1)}
+          <span class="opt-score-bar"><span class="opt-score-bar-fill" style="width:${scorePct}%"></span></span>
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  // Scroll into view
+  setTimeout(() => wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+function applyOptimum(cons) {
+  // Aggiorna gli slider (desktop + mobile)
+  const pd = document.getElementById('p-consolidation');
+  const md = document.getElementById('m-consolidation');
+  if (pd) { pd.value = cons; }
+  if (md) { md.value = cons; }
+  const vd = document.getElementById('v-consolidation');
+  const vm = document.getElementById('mv-consolidation');
+  if (vd) vd.textContent = cons + ' m';
+  if (vm) vm.textContent = cons + ' m';
+  // Rilancia simulazione con nuovo parametro
+  run();
+}
+
 /* ── Esegui simulazione ── */
 function run(goToResults = false) {
   document.getElementById('ov').classList.remove('hidden');
@@ -1629,12 +2021,22 @@ function run(goToResults = false) {
     document.getElementById('sim-count').textContent = numIt(simCount);
     renderKPI(res, p);
     renderOrderPlan(res, p);
-    renderCharts(res, p);
+    renderCharts(res, p, currentScenario);
     renderTable(res, p);
     renderResoconto(res, p);
     document.getElementById('ov').classList.add('hidden');
     if (goToResults && window.innerWidth < 768) mTab(2, document.getElementById('ni-2'));
   }, 30);
+}
+
+/* ── Switch scenario nei grafici ── */
+function switchScenario(sc, btn) {
+  currentScenario = sc;
+  document.querySelectorAll('.sbtn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  if (lastResult && lastParams) {
+    renderCharts(lastResult, lastParams, sc);
+  }
 }
 
 /* ── Esempio farmaceutico: profilo stagionale realistico ── */
@@ -1698,6 +2100,7 @@ function bindSliders() {
   [['p-variability', 'v-variability', '%'],
    ['p-service', 'v-service', '%'],
    ['p-leadtime', 'v-leadtime', ' m'],
+   ['p-consolidation', 'v-consolidation', ' m'],
    ['p-horizon', 'v-horizon', ' m'],
    ['p-nsim', 'v-nsim', '']].forEach(([id, vid, suf]) => {
     const el = document.getElementById(id);
